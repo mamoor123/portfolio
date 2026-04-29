@@ -1,42 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <defs>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#ef4444"/>
-      <stop offset="100%" style="stop-color:#fbbf24"/>
-    </linearGradient>
-  </defs>
-  <!-- Background -->
-  <rect width="800" height="500" fill="#1c1c1c" rx="12"/>
-  <!-- Large accent glow -->
-  <circle cx="400" cy="250" r="250" fill="#ef4444" opacity="0.15"/>
-  <circle cx="300" cy="200" r="180" fill="#fbbf24" opacity="0.1"/>
-  <!-- Browser chrome bar -->
-  <rect x="0" y="0" width="800" height="48" fill="#111827" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#111827"/>
+  <rect width="800" height="500" fill="#111111" rx="12"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a1a" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a1a"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
-  <rect x="100" y="14" width="350" height="20" rx="10" fill="#1f2937"/>
-  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://your-project.vercel.app</text>
-  <!-- Emoji (bright, no glow filter) -->
-  <text x="400" y="230" font-size="96" text-anchor="middle" dominant-baseline="middle">💀</text>
-  <!-- Title (bright white) -->
-  <text x="400" y="320" font-family="Inter,system-ui,sans-serif" font-size="36" font-weight="900" fill="#ffffff" text-anchor="middle">Dead Serious</text>
-  <!-- Tech subtitle -->
-  <text x="400" y="360" font-family="JetBrains Mono,monospace" font-size="15" fill="#9ca3af" text-anchor="middle">JavaScript · Humor</text>
-  <!-- Accent bar -->
-  <rect x="260" y="380" width="280" height="5" fill="url(#accent)" rx="3"/>
-  <!-- Accent dots -->
-  <circle cx="100" cy="440" r="6" fill="#ef4444" opacity="0.6"/>
-  <circle cx="700" cy="100" r="8" fill="#fbbf24" opacity="0.5"/>
-  <circle cx="650" cy="420" r="4" fill="#ef4444" opacity="0.7"/>
-  <circle cx="150" cy="120" r="5" fill="#fbbf24" opacity="0.4"/>
-  <!-- Fake UI elements for realism -->
-  <rect x="60" y="80" width="200" height="12" rx="6" fill="#ef4444" opacity="0.3"/>
-  <rect x="60" y="100" width="140" height="12" rx="6" fill="#374151" opacity="0.5"/>
-  <rect x="60" y="120" width="180" height="12" rx="6" fill="#374151" opacity="0.4"/>
-  <rect x="540" y="80" width="200" height="80" rx="8" fill="#1f2937" opacity="0.6"/>
-  <rect x="540" y="170" width="200" height="80" rx="8" fill="#1f2937" opacity="0.5"/>
-  <rect x="60" y="160" width="450" height="60" rx="8" fill="#1f2937" opacity="0.5"/>
-  <rect x="60" y="240" width="450" height="60" rx="8" fill="#1f2937" opacity="0.4"/>
+  <rect x="100" y="14" width="350" height="20" rx="10" fill="#111111"/>
+  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://deadserious.app</text>
+  <rect x="100" y="120" width="600" height="100" fill="#1a1a1a" rx="8"/>
+  <text x="400" y="165" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#ef4444" text-anchor="middle">FATAL: Success is not an option.</text>
+  <text x="400" y="195" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Please consult your nearest developer.</text>
+  <rect x="100" y="250" width="600" height="100" fill="#1a1a1a" rx="8"/>
+  <text x="400" y="295" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#fbbf24" text-anchor="middle">CRITICAL: Task failed successfully.</text>
+  <text x="400" y="325" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">All your code are belong to us.</text>
+  <text x="400" y="470" font-size="13" fill="#9ca3af" text-anchor="middle">💀 Dead Serious — JavaScript · Humor</text>
 </svg>
