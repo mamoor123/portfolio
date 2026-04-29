@@ -1,31 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0a"/>
-      <stop offset="100%" style="stop-color:#111"/>
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0f3440"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f97316"/>
-      <stop offset="100%" style="stop-color:#8b5cf6"/>
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#f97316"/>
     </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
   <rect width="800" height="500" fill="url(#bg)" rx="12"/>
-  <!-- Top bar -->
-  <rect x="0" y="0" width="800" height="48" fill="#111" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#111"/>
-  <circle cx="24" cy="24" r="6" fill="#ff5f57"/>
-  <circle cx="44" cy="24" r="6" fill="#febc2e"/>
-  <circle cx="64" cy="24" r="6" fill="#28c840"/>
-  <!-- Emoji -->
-  <text x="400" y="200" font-size="72" text-anchor="middle" dominant-baseline="middle">⭐</text>
+  <!-- Browser chrome -->
+  <rect x="0" y="0" width="800" height="44" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="22" width="800" height="22" fill="#1a1a2e"/>
+  <circle cx="22" cy="22" r="5" fill="#ff5f57"/>
+  <circle cx="40" cy="22" r="5" fill="#febc2e"/>
+  <circle cx="58" cy="22" r="5" fill="#28c840"/>
+  <rect x="90" y="14" width="300" height="16" rx="8" fill="#2a2a3e"/>
+  <text x="240" y="26" font-family="monospace" font-size="10" fill="#666" text-anchor="middle">https://your-project.vercel.app</text>
+  <!-- Content area -->
+  <rect x="20" y="60" width="760" height="420" rx="8" fill="#111118" opacity="0.5"/>
+  <!-- Emoji (large) -->
+  <text x="400" y="220" font-size="80" text-anchor="middle" dominant-baseline="middle" filter="url(#glow)">⭐</text>
   <!-- Title -->
-  <text x="400" y="280" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" fill="#e8e8e8" text-anchor="middle">ReviewReply</text>
-  <!-- Tech -->
-  <text x="400" y="320" font-family="JetBrains Mono,monospace" font-size="13" fill="#888" text-anchor="middle">AI · Google Reviews · Automation</text>
+  <text x="400" y="310" font-family="Inter,system-ui,sans-serif" font-size="32" font-weight="800" fill="#f0f0f0" text-anchor="middle">ReviewReply</text>
+  <!-- Tech subtitle -->
+  <text x="400" y="350" font-family="JetBrains Mono,monospace" font-size="14" fill="#888" text-anchor="middle">JavaScript · AI · Google Reviews</text>
   <!-- Accent bar -->
-  <rect x="300" y="350" width="200" height="3" fill="url(#accent)" rx="2"/>
-  <!-- Decorative dots -->
-  <circle cx="100" cy="420" r="4" fill="#f97316" opacity="0.3"/>
-  <circle cx="700" cy="120" r="6" fill="#8b5cf6" opacity="0.2"/>
-  <circle cx="650" cy="400" r="3" fill="#f97316" opacity="0.4"/>
+  <rect x="280" y="370" width="240" height="4" fill="url(#accent)" rx="2"/>
+  <!-- Decorative elements -->
+  <circle cx="120" cy="420" r="40" fill="#f59e0b" opacity="0.08"/>
+  <circle cx="680" cy="100" r="60" fill="#f97316" opacity="0.06"/>
+  <rect x="60" y="140" width="80" height="3" fill="#f59e0b" opacity="0.2" rx="1"/>
+  <rect x="660" y="380" width="80" height="3" fill="#f97316" opacity="0.2" rx="1"/>
 </svg>
