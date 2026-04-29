@@ -202,38 +202,41 @@
   }
 
   // ── Build UI ────────────────────────────────────────────────────
+  // Theme-aware styles using CSS variables from the site
   const styles = `
-    .agent-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;border:none;cursor:pointer;font-size:1.5rem;display:flex;align-items:center;justify-content:center;z-index:9998;box-shadow:0 4px 24px rgba(99,102,241,0.4);transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
+    .agent-fab{position:fixed;bottom:24px;right:24px;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--accent,#6366f1),#8b5cf6);color:white;border:none;cursor:pointer;font-size:1.5rem;display:flex;align-items:center;justify-content:center;z-index:10001;box-shadow:0 4px 24px rgba(99,102,241,0.4);transition:all 0.3s cubic-bezier(0.4,0,0.2,1)}
     .agent-fab:hover{transform:scale(1.1);box-shadow:0 6px 32px rgba(99,102,241,0.5)}
     .agent-fab.open{transform:rotate(90deg)}
-    .agent-window{position:fixed;bottom:92px;right:24px;width:380px;max-height:520px;background:#0a0a0a;border:1px solid #1a1a1a;border-radius:16px;z-index:9997;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif}
+    .agent-fab-pulse{animation:agentPulse 2s ease-in-out infinite}
+    @keyframes agentPulse{0%,100%{box-shadow:0 4px 24px rgba(99,102,241,0.4)}50%{box-shadow:0 4px 24px rgba(99,102,241,0.4),0 0 0 12px rgba(99,102,241,0.15)}}
+    .agent-window{position:fixed;bottom:92px;right:24px;width:380px;max-height:520px;background:var(--bg-card,#0a0a0a);border:1px solid var(--border,#1a1a1a);border-radius:16px;z-index:10001;display:none;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.5);font-family:var(--font,'Inter',-apple-system,BlinkMacSystemFont,sans-serif)}
     .agent-window.show{display:flex;animation:agentSlideUp 0.3s ease}
     @keyframes agentSlideUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-    .agent-header{padding:16px 20px;background:linear-gradient(135deg,#111,#0d0d0d);border-bottom:1px solid #1a1a1a;display:flex;align-items:center;gap:12px}
-    .agent-header-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1rem}
-    .agent-header-info h4{font-size:0.9rem;font-weight:700;color:#e8e8e8;margin:0}
-    .agent-header-info p{font-size:0.72rem;color:#22c55e;margin:0;display:flex;align-items:center;gap:4px}
-    .agent-header-info p::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block}
-    .agent-close{margin-left:auto;background:none;border:none;color:#888;cursor:pointer;font-size:1.2rem;padding:4px}
-    .agent-close:hover{color:#e8e8e8}
-    .agent-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin;scrollbar-color:#1a1a1a transparent}
-    .agent-msg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:0.85rem;line-height:1.5;color:#e8e8e8;word-wrap:break-word}
-    .agent-msg.bot{background:#111;border:1px solid #1a1a1a;border-bottom-left-radius:4px;align-self:flex-start}
-    .agent-msg.user{background:#6366f1;border-bottom-right-radius:4px;align-self:flex-end}
-    .agent-msg a.agent-link{color:#818cf8;text-decoration:underline}
+    .agent-header{padding:16px 20px;background:var(--surface,#111);border-bottom:1px solid var(--border,#1a1a1a);display:flex;align-items:center;gap:12px}
+    .agent-header-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--accent,#6366f1),#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1rem}
+    .agent-header-info h4{font-size:0.9rem;font-weight:700;color:var(--text,#e8e8e8);margin:0}
+    .agent-header-info p{font-size:0.72rem;color:var(--green,#22c55e);margin:0;display:flex;align-items:center;gap:4px}
+    .agent-header-info p::before{content:'';width:6px;height:6px;background:var(--green,#22c55e);border-radius:50%;display:inline-block}
+    .agent-close{margin-left:auto;background:none;border:none;color:var(--text-secondary,#888);cursor:pointer;font-size:1.2rem;padding:4px}
+    .agent-close:hover{color:var(--text,#e8e8e8)}
+    .agent-messages{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin;scrollbar-color:var(--border,#1a1a1a) transparent}
+    .agent-msg{max-width:85%;padding:10px 14px;border-radius:12px;font-size:0.85rem;line-height:1.5;color:var(--text,#e8e8e8);word-wrap:break-word}
+    .agent-msg.bot{background:var(--bg,#050505);border:1px solid var(--border,#1a1a1a);border-bottom-left-radius:4px;align-self:flex-start}
+    .agent-msg.user{background:var(--accent,#6366f1);color:white;border-bottom-right-radius:4px;align-self:flex-end}
+    .agent-msg a.agent-link{color:var(--accent-light,#818cf8);text-decoration:underline}
     .agent-msg a.agent-link:hover{color:#a5b4fc}
-    .agent-msg strong{color:#fff}
+    .agent-msg strong{color:var(--text,#fff)}
     .agent-quick{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 12px}
-    .agent-quick-btn{padding:6px 12px;background:#111;border:1px solid #1a1a1a;border-radius:100px;color:#888;font-size:0.72rem;cursor:pointer;transition:all 0.2s;white-space:nowrap}
-    .agent-quick-btn:hover{border-color:#6366f1;color:#818cf8;background:rgba(99,102,241,0.1)}
-    .agent-input-area{padding:12px 16px;border-top:1px solid #1a1a1a;display:flex;gap:8px}
-    .agent-input{flex:1;padding:10px 14px;background:#111;border:1px solid #1a1a1a;border-radius:10px;color:#e8e8e8;font-size:0.85rem;font-family:inherit;outline:none;transition:border-color 0.2s}
-    .agent-input:focus{border-color:#6366f1}
-    .agent-input::placeholder{color:#555}
-    .agent-send{width:40px;height:40px;border-radius:10px;background:#6366f1;border:none;color:white;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
-    .agent-send:hover{background:#818cf8}
+    .agent-quick-btn{padding:6px 12px;background:var(--bg,#050505);border:1px solid var(--border,#1a1a1a);border-radius:100px;color:var(--text-secondary,#888);font-size:0.72rem;cursor:pointer;transition:all 0.2s;white-space:nowrap}
+    .agent-quick-btn:hover{border-color:var(--accent,#6366f1);color:var(--accent-light,#818cf8);background:var(--accent-glow,rgba(99,102,241,0.1))}
+    .agent-input-area{padding:12px 16px;border-top:1px solid var(--border,#1a1a1a);display:flex;gap:8px}
+    .agent-input{flex:1;padding:10px 14px;background:var(--bg,#050505);border:1px solid var(--border,#1a1a1a);border-radius:10px;color:var(--text,#e8e8e8);font-size:0.85rem;font-family:inherit;outline:none;transition:border-color 0.2s}
+    .agent-input:focus{border-color:var(--accent,#6366f1)}
+    .agent-input::placeholder{color:var(--text-muted,#555)}
+    .agent-send{width:40px;height:40px;border-radius:10px;background:var(--accent,#6366f1);border:none;color:white;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all 0.2s}
+    .agent-send:hover{background:var(--accent-light,#818cf8)}
     .agent-typing{display:flex;gap:4px;padding:10px 14px;align-self:flex-start}
-    .agent-typing span{width:6px;height:6px;background:#555;border-radius:50%;animation:agentBounce 1.2s infinite}
+    .agent-typing span{width:6px;height:6px;background:var(--text-muted,#555);border-radius:50%;animation:agentBounce 1.2s infinite}
     .agent-typing span:nth-child(2){animation-delay:0.2s}
     .agent-typing span:nth-child(3){animation-delay:0.4s}
     @keyframes agentBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
@@ -247,7 +250,7 @@
 
     // FAB
     const fab = document.createElement('button');
-    fab.className = 'agent-fab';
+    fab.className = 'agent-fab agent-fab-pulse';
     fab.innerHTML = '💬';
     fab.setAttribute('aria-label', 'Chat with Mamoor\'s AI assistant');
     document.body.appendChild(fab);
@@ -295,23 +298,31 @@
       quick.appendChild(btn);
     });
 
-    // Toggle
-    fab.onclick = () => {
-      const isOpen = win.classList.contains('show');
-      win.classList.toggle('show');
-      fab.classList.toggle('open');
-      fab.innerHTML = isOpen ? '💬' : '✕';
-      if (!isOpen && msgs.children.length === 0) {
+    // Open/close helpers
+    function openChat() {
+      win.classList.add('show');
+      fab.classList.add('open');
+      fab.classList.remove('agent-fab-pulse');
+      fab.innerHTML = '✕';
+      if (msgs.children.length === 0) {
         addBotMessage(`Hey! 👋 I'm Mamoor's portfolio assistant. Ask me anything about his projects, services, pricing, or tech stack.`);
       }
-      if (!isOpen) input.focus();
-    };
+      input.focus();
+    }
 
-    win.querySelector('.agent-close').onclick = () => {
+    function closeChat() {
       win.classList.remove('show');
       fab.classList.remove('open');
       fab.innerHTML = '💬';
+    }
+
+    // Toggle
+    fab.onclick = () => {
+      const isOpen = win.classList.contains('show');
+      if (isOpen) closeChat(); else openChat();
     };
+
+    win.querySelector('.agent-close').onclick = closeChat;
 
     // Send
     function sendMessage(text) {
@@ -360,6 +371,37 @@
       const el = document.getElementById('agent-typing');
       if (el) el.remove();
     }
+
+    // ── Auto-open after loader hides (engages visitors) ──────────
+    function waitForLoader() {
+      const loader = document.getElementById('loader');
+      if (!loader || loader.classList.contains('hidden')) {
+        // Loader already gone — open chat after short delay
+        setTimeout(openChat, 800);
+      } else {
+        // Wait for loader to hide
+        const obs = new MutationObserver(() => {
+          if (loader.classList.contains('hidden')) {
+            obs.disconnect();
+            setTimeout(openChat, 800);
+          }
+        });
+        obs.observe(loader, { attributes: true, attributeFilter: ['class'] });
+      }
+    }
+    waitForLoader();
+
+    // ── Close on Escape key ──────────────────────────────────────
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && win.classList.contains('show')) closeChat();
+    });
+
+    // ── Close when clicking outside ──────────────────────────────
+    document.addEventListener('click', e => {
+      if (win.classList.contains('show') && !win.contains(e.target) && !fab.contains(e.target)) {
+        closeChat();
+      }
+    });
   }
 
   // Wait for page to load
