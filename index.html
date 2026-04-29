@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mamoor Ahmad — AI & Full-Stack Developer | 28+ Projects Shipped</title>
+  <meta name="description" content="AI-powered applications, SaaS products, and automation tools. 28+ projects shipped including multi-agent systems, climate tech, and developer tools.">
+  <meta property="og:title" content="Mamoor Ahmad — AI & Full-Stack Developer">
+  <meta property="og:description" content="28+ projects shipped. AI agents, SaaS platforms, and automation tools.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#050505;--bg-card:#0a0a0a;--bg-card-hover:#111;--surface:#0d0d0d;
+      --border:#1a1a1a;--border-hover:#2a2a2a;
+      --text:#e8e8e8;--text-secondary:#888;--text-muted:#555;
+      --accent:#6366f1;--accent-light:#818cf8;--accent-glow:rgba(99,102,241,0.15);
+      --green:#22c55e;--green-glow:rgba(34,197,94,0.15);
+      --orange:#f97316;--pink:#ec4899;--cyan:#06b6d4;--yellow:#eab308;
+      --font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      --mono:'JetBrains Mono','Fira Code',monospace;
+      --radius:16px;--radius-sm:10px;
+      --transition:0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+    [data-theme="light"]{
+      --bg:#fafafa;--bg-card:#ffffff;--bg-card-hover:#f5f5f5;--surface:#f0f0f0;
+      --border:#e5e5e5;--border-hover:#d4d4d4;
+      --text:#171717;--text-secondary:#525252;--text-muted:#a3a3a3;
+      --accent:#4f46e5;--accent-light:#6366f1;--accent-glow:rgba(79,70,229,0.1);
+      --green-glow:rgba(34,197,94,0.1);
+    }
+    html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+    body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased;transition:background 0.4s ease,color 0.4s ease}
+    ::selection{background:var(--accent);color:white}
+    a{color:inherit;text-decoration:none}
+
+    /* LOADER */
+    .loader{position:fixed;inset:0;z-index:10000;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity 0.6s ease,visibility 0.6s ease}
+    .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-name{font-size:2rem;font-weight:900;letter-spacing:-0.03em;margin-bottom:24px}
+    .loader-bar{width:200px;height:3px;background:var(--border);border-radius:4px;overflow:hidden}
+    .loader-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--cyan),var(--pink));border-radius:4px;animation:loadBar 1.5s ease forwards}
+    @keyframes loadBar{0%{width:0}100%{width:100%}}
+
+    /* CURSOR */
+    .cursor-dot{position:fixed;width:8px;height:8px;background:var(--accent);border-radius:50%;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:transform 0.08s ease}
+    .cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid var(--accent-light);border-radius:50%;pointer-events:none;z-index:9998;transition:transform 0.15s ease,width 0.2s,height 0.2s,border-color 0.2s;opacity:0.5}
+    .cursor-ring.hover{width:56px;height:56px;border-color:var(--accent);opacity:0.8}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 40px;display:flex;justify-content:space-between;align-items:center;backdrop-filter:blur(20px) saturate(180%);background:rgba(5,5,5,0.7);border-bottom:1px solid var(--border);transition:var(--transition)}
+    [data-theme="light"] nav{background:rgba(250,250,250,0.8)}
+    .nav-logo{font-weight:800;font-size:1.1rem;letter-spacing:-0.02em}
+    .nav-logo span{color:var(--accent)}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{font-size:0.85rem;font-weight:500;color:var(--text-secondary);transition:var(--transition)}
+    .nav-links a:hover{color:var(--text)}
+    .nav-cta{padding:8px 20px;background:var(--accent)!important;color:white!important;border-radius:8px;font-weight:600}
+    .nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px var(--accent-glow)}
+    .nav-right{display:flex;align-items:center;gap:16px}
+    .theme-toggle{width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:1.1rem;transition:var(--transition)}
+    .theme-toggle:hover{border-color:var(--accent);transform:rotate(20deg)}
+    .nav-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
+    .nav-toggle span{width:24px;height:2px;background:var(--text)}
+
+    /* HERO */
+    .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:120px 40px 80px;position:relative;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:0}
+    .hero-gradient{position:absolute;width:600px;height:600px;border-radius:50%;filter:blur(120px);opacity:0.3;animation:float 20s ease-in-out infinite}
+    .hero-gradient.g1{top:-200px;right:-100px;background:var(--accent)}
+    .hero-gradient.g2{bottom:-200px;left:-100px;background:var(--pink);animation-delay:-7s}
+    .hero-gradient.g3{top:50%;left:50%;transform:translate(-50%,-50%);background:var(--cyan);opacity:0.1;animation-delay:-14s}
+    @keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-30px) scale(1.05)}66%{transform:translate(-20px,20px) scale(0.95)}}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 70%)}
+    [data-theme="light"] .hero-grid{background-image:linear-gradient(rgba(0,0,0,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,0.03) 1px,transparent 1px)}
+    .hero-content{position:relative;z-index:1;max-width:800px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--green-glow);border:1px solid rgba(34,197,94,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:var(--green);margin-bottom:32px}
+    .hero-badge .dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+    .hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;line-height:1.1;letter-spacing:-0.03em;margin-bottom:24px}
+    .gradient-text{background:linear-gradient(135deg,var(--accent-light),var(--cyan),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);color:var(--text-secondary);max-width:600px;margin:0 auto 16px;line-height:1.7}
+    .hero-typed{font-family:var(--mono);font-size:1rem;color:var(--accent-light);margin-bottom:40px;min-height:28px}
+    .hero-stats{display:flex;justify-content:center;gap:48px;margin-bottom:40px}
+    .hero-stat{text-align:center}
+    .hero-stat .number{font-size:2rem;font-weight:800}
+    .hero-stat .label{font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px}
+    .hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+    .btn{padding:14px 32px;border-radius:12px;font-weight:600;font-size:0.95rem;transition:var(--transition);cursor:pointer;border:none;display:inline-flex;align-items:center;gap:8px}
+    .btn-primary{background:var(--accent);color:white;box-shadow:0 0 30px var(--accent-glow)}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(99,102,241,0.3)}
+    .btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}
+    .btn-secondary:hover{border-color:var(--border-hover);transform:translateY(-2px)}
+    .btn-whatsapp{background:#25D366;color:white}
+    .btn-whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(37,211,102,0.3)}
+
+    /* SECTIONS */
+    section{padding:120px 40px;max-width:1200px;margin:0 auto}
+    .section-label{font-family:var(--mono);font-size:0.8rem;color:var(--accent-light);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:12px}
+    .section-title{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;margin-bottom:16px}
+    .section-desc{font-size:1.05rem;color:var(--text-secondary);max-width:600px;margin-bottom:64px;line-height:1.7}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:start}
+    .about-photo{position:relative}
+    .about-photo img{width:100%;border-radius:var(--radius);border:2px solid var(--border)}
+    .about-photo::before{content:'';position:absolute;inset:-8px;border-radius:24px;border:1px solid var(--accent);opacity:0.3;z-index:-1}
+    .about-photo::after{content:'';position:absolute;bottom:-12px;right:-12px;width:80px;height:80px;background:var(--accent);border-radius:50%;filter:blur(40px);opacity:0.4;z-index:-1}
+    .about-content h3{font-size:1.5rem;font-weight:700;margin-bottom:16px}
+    .about-content p{color:var(--text-secondary);line-height:1.8;margin-bottom:16px}
+    .about-highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+    .about-highlight{display:flex;align-items:center;gap:10px;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);font-size:0.9rem}
+    .about-highlight .icon{font-size:1.2rem}
+    .about-socials{display:flex;gap:12px;margin-top:24px}
+    .social-link{width:44px;height:44px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.2rem;transition:var(--transition)}
+    .social-link:hover{border-color:var(--accent);transform:translateY(-2px)}
+
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition);position:relative;overflow:hidden}
+    .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--cyan));opacity:0;transition:var(--transition)}
+    .service-card:hover{border-color:var(--border-hover);transform:translateY(-4px)}
+    .service-card:hover::before{opacity:1}
+    .service-icon{font-size:2.5rem;margin-bottom:16px}
+    .service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+    .service-card p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:16px}
+    .service-price{font-family:var(--mono);font-size:0.85rem;color:var(--accent-light);font-weight:600}
+    .service-techs{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+    .service-tech{padding:3px 10px;background:var(--accent-glow);border:1px solid rgba(99,102,241,0.2);border-radius:6px;font-size:0.72rem;font-family:var(--mono);color:var(--accent-light)}
+
+    /* PROJECTS */
+    .category-filter{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+    .filter-btn{padding:8px 18px;border-radius:100px;font-size:0.8rem;font-weight:600;background:var(--surface);border:1px solid var(--border);color:var(--text-secondary);cursor:pointer;transition:var(--transition)}
+    .filter-btn:hover,.filter-btn.active{background:var(--accent-glow);border-color:var(--accent);color:var(--accent-light)}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:20px}
+    .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);cursor:pointer;display:flex;flex-direction:column}
+    .project-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
+    .project-card.featured{grid-column:span 2}
+    .project-screenshot{width:100%;height:200px;object-fit:cover;border-bottom:1px solid var(--border)}
+    .project-card.featured .project-screenshot{height:280px}
+    .project-body{padding:24px;flex:1;display:flex;flex-direction:column}
+    .project-status{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:100px;font-size:0.7rem;font-weight:600;margin-bottom:10px;width:fit-content}
+    .status-live{background:var(--green-glow);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
+    .status-building{background:rgba(249,115,22,0.1);color:var(--orange);border:1px solid rgba(249,115,22,0.3)}
+    .status-oss{background:var(--accent-glow);color:var(--accent-light);border:1px solid rgba(99,102,241,0.3)}
+    .status-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+    .project-card h3{font-size:1.15rem;font-weight:700;margin-bottom:6px}
+    .project-card .desc{font-size:0.88rem;color:var(--text-secondary);line-height:1.6;flex:1}
+    .project-meta{display:flex;align-items:center;gap:16px;margin-top:12px;font-size:0.75rem;color:var(--text-muted);flex-wrap:wrap}
+    .project-meta-item{display:flex;align-items:center;gap:4px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+    .project-tag{padding:3px 8px;background:rgba(255,255,255,0.04);border-radius:5px;font-size:0.68rem;font-family:var(--mono);color:var(--text-muted);border:1px solid var(--border)}
+    [data-theme="light"] .project-tag{background:rgba(0,0,0,0.03)}
+    .project-link{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:0.82rem;font-weight:600;color:var(--accent-light);transition:var(--transition)}
+    .project-link:hover{gap:10px}
+
+    /* MARQUEE */
+    .marquee-container{overflow:hidden;padding:40px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:0 -40px}
+    .marquee-track{display:flex;gap:48px;animation:marquee 30s linear infinite;width:max-content}
+    .marquee-item{font-size:1.1rem;font-weight:600;color:var(--text-muted);white-space:nowrap;display:flex;align-items:center;gap:8px}
+    .marquee-item .dot{color:var(--accent)}
+    @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+    /* TECH STACK */
+    .tech-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+    .tech-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:20px 12px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);transition:var(--transition);text-align:center}
+    .tech-item:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .tech-item .icon{font-size:2rem}
+    .tech-item .name{font-size:0.8rem;font-weight:600}
+    .tech-item .level{font-size:0.65rem;color:var(--text-muted);font-family:var(--mono)}
+    .tech-bar{width:100%;height:3px;background:var(--border);border-radius:2px;margin-top:4px;overflow:hidden}
+    .tech-bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--cyan))}
+
+    /* CONTRIBUTION GRAPH */
+    .contrib-section{margin-top:64px}
+    .contrib-graph{display:flex;gap:3px;flex-wrap:wrap;max-width:100%;overflow-x:auto;padding:16px 0}
+    .contrib-week{display:flex;flex-direction:column;gap:3px}
+    .contrib-day{width:12px;height:12px;border-radius:2px;background:var(--border);transition:var(--transition)}
+    .contrib-day.l1{background:rgba(99,102,241,0.2)}
+    .contrib-day.l2{background:rgba(99,102,241,0.4)}
+    .contrib-day.l3{background:rgba(99,102,241,0.6)}
+    .contrib-day.l4{background:var(--accent)}
+    .contrib-legend{display:flex;align-items:center;gap:4px;margin-top:8px;font-size:0.7rem;color:var(--text-muted)}
+    .contrib-legend .contrib-day{cursor:default}
+
+    /* SKILLS */
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+    .skill-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition)}
+    .skill-card:hover{border-color:var(--border-hover);transform:translateY(-2px)}
+    .skill-icon{font-size:2rem;margin-bottom:16px}
+    .skill-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
+    .skill-card p{font-size:0.9rem;color:var(--text-secondary);line-height:1.6}
+    .skill-techs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .skill-tech{padding:4px 12px;background:var(--accent-glow);border:1px solid rgba(99,102,241,0.2);border-radius:6px;font-size:0.75rem;font-family:var(--mono);color:var(--accent-light)}
+
+    /* PROCESS */
+    .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:step}
+    .process-step{text-align:center;padding:32px 20px;position:relative}
+    .process-step::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--mono);font-size:3rem;font-weight:800;color:var(--border);display:block;margin-bottom:16px}
+    .process-step h4{font-size:1rem;font-weight:700;margin-bottom:8px}
+    .process-step p{font-size:0.85rem;color:var(--text-secondary);line-height:1.6}
+    .process-line{position:absolute;top:50px;right:-12px;width:24px;height:1px;background:var(--border)}
+    .process-step:last-child .process-line{display:none}
+
+    /* TESTIMONIALS */
+    .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:20px}
+    .testimonial-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px}
+    .testimonial-quote{font-size:1rem;color:var(--text-secondary);line-height:1.7;margin-bottom:20px;font-style:italic}
+    .testimonial-quote::before{content:'"';color:var(--accent);font-size:2rem;line-height:0;vertical-align:-0.3em;margin-right:4px}
+    .testimonial-author{display:flex;align-items:center;gap:12px}
+    .testimonial-avatar{width:40px;height:40px;border-radius:50%;background:var(--accent-glow);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;color:var(--accent-light)}
+    .testimonial-name{font-weight:600;font-size:0.9rem}
+    .testimonial-role{font-size:0.8rem;color:var(--text-muted)}
+
+    /* CONTACT */
+    .contact-section{text-align:center;padding:120px 40px;position:relative}
+    .contact-section .section-title{margin-bottom:24px}
+    .contact-section .section-desc{margin:0 auto 40px;text-align:center}
+    .contact-methods{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:40px}
+    .contact-card{display:flex;align-items:center;gap:12px;padding:16px 24px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);transition:var(--transition)}
+    .contact-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .contact-card-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem}
+    .contact-card-text{text-align:left}
+    .contact-card-label{font-size:0.75rem;color:var(--text-muted)}
+    .contact-card-value{font-weight:600;font-size:0.9rem}
+
+    /* FOOTER */
+    footer{padding:40px;text-align:center;border-top:1px solid var(--border);color:var(--text-muted);font-size:0.8rem}
+    footer a{color:var(--accent-light)}
+    .footer-links{display:flex;justify-content:center;gap:24px;margin-bottom:16px}
+
+    /* REVEAL */
+    .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1),transform 0.8s cubic-bezier(0.4,0,0.2,1)}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .project-card.featured{grid-column:span 1}
+      .process-steps{grid-template-columns:repeat(2,1fr)}
+      .process-line{display:none}
+      .about-grid{grid-template-columns:1fr;gap:40px}
+      .about-photo{max-width:250px;margin:0 auto}
+    }
+    @media(max-width:768px){
+      nav{padding:16px 20px}
+      .nav-links{display:none}
+      .nav-toggle{display:flex}
+      .nav-links.active{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(5,5,5,0.95);backdrop-filter:blur(20px);padding:24px;gap:20px;border-bottom:1px solid var(--border)}
+      [data-theme="light"] .nav-links.active{background:rgba(250,250,250,0.95)}
+      section{padding:80px 20px}
+      .hero{padding:100px 20px 60px}
+      .hero-stats{gap:24px;flex-wrap:wrap}
+      .hero-stat .number{font-size:1.5rem}
+      .projects-grid{grid-template-columns:1fr}
+      .process-steps{grid-template-columns:1fr}
+      .cursor-dot,.cursor-ring{display:none}
+      .about-highlights{grid-template-columns:1fr}
+      .tech-grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-name"><span style="color:var(--accent)">&lt;</span>Mamoor<span style="color:var(--accent)"> /&gt;</span></div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+  </div>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo"><span>&lt;</span>Mamoor<span> /&gt;</span></div>
+    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')"><span></span><span></span><span></span></div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#tech">Tech Stack</a>
+      <a href="#process">Process</a>
+      <a href="#contact" class="nav-cta">Let's Talk →</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient g1"></div>
+      <div class="hero-gradient g2"></div>
+      <div class="hero-gradient g3"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal"><span class="dot"></span> Available for new projects</div>
+      <h1 class="reveal">I build <span class="gradient-text">AI-powered</span><br>products that ship</h1>
+      <p class="hero-subtitle reveal">Full-stack developer from Pakistan specializing in AI agents, SaaS platforms, and automation tools. 28+ projects shipped — from autonomous agent systems to climate tech.</p>
+      <div class="hero-typed reveal" id="typed"></div>
+      <div class="hero-stats reveal">
+        <div class="hero-stat"><div class="number" data-count="28">0</div><div class="label">Projects Shipped</div></div>
+        <div class="hero-stat"><div class="number" data-count="15">0</div><div class="label">AI Products</div></div>
+        <div class="hero-stat"><div class="number" data-count="8">0</div><div class="label">SaaS Platforms</div></div>
+        <div class="hero-stat"><div class="number" data-count="6">0</div><div class="label">Live Products</div></div>
+      </div>
+      <div class="hero-actions reveal">
+        <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+        <a href="https://wa.me/923279858009?text=Hi%20Mamoor%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="btn btn-whatsapp">💬 WhatsApp Me</a>
+        <a href="#contact" class="btn btn-secondary">More Contact →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <span class="marquee-item"><span class="dot">◆</span> AI Agents</span>
+      <span class="marquee-item"><span class="dot">◆</span> SaaS Development</span>
+      <span class="marquee-item"><span class="dot">◆</span> Full-Stack Engineering</span>
+      <span class="marquee-item"><span class="dot">◆</span> Multi-Agent Systems</span>
+      <span class="marquee-item"><span class="dot">◆</span> Chrome Extensions</span>
+      <span class="marquee-item"><span class="dot">◆</span> Climate Tech</span>
+      <span class="marquee-item"><span class="dot">◆</span> Data Visualization</span>
+      <span class="marquee-item"><span class="dot">◆</span> DevOps & Automation</span>
+      <span class="marquee-item"><span class="dot">◆</span> AI Agents</span>
+      <span class="marquee-item"><span class="dot">◆</span> SaaS Development</span>
+      <span class="marquee-item"><span class="dot">◆</span> Full-Stack Engineering</span>
+      <span class="marquee-item"><span class="dot">◆</span> Multi-Agent Systems</span>
+      <span class="marquee-item"><span class="dot">◆</span> Chrome Extensions</span>
+      <span class="marquee-item"><span class="dot">◆</span> Climate Tech</span>
+      <span class="marquee-item"><span class="dot">◆</span> Data Visualization</span>
+      <span class="marquee-item"><span class="dot">◆</span> DevOps & Automation</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label reveal">// About Me</div>
+    <h2 class="section-title reveal">The person behind <span class="gradient-text">the code</span></h2>
+    <div class="about-grid reveal">
+      <div class="about-photo">
+        <img src="avatar.jpg" alt="Mamoor Ahmad" loading="lazy">
+      </div>
+      <div class="about-content">
+        <h3>Hi, I'm Mamoor Ahmad 👋</h3>
+        <p>I'm a full-stack developer from Pakistan with a deep passion for building AI-powered products that solve real problems. Over the past 2+ years, I've shipped <strong>28+ projects</strong> — from autonomous multi-agent systems to SaaS platforms, climate tech tools, and Chrome extensions.</p>
+        <p>My approach is simple: <strong>understand the problem deeply, build the simplest solution that works, and ship fast.</strong> I believe in code that serves users, not code that impresses other developers. Every project I build starts with "who is this for?" and ends with "does it actually work?"</p>
+        <p>When I'm not coding, I'm exploring AI agent architectures, contributing to open source, or thinking about how technology can address climate change.</p>
+        <div class="about-highlights">
+          <div class="about-highlight"><span class="icon">🧠</span> AI & Multi-Agent Systems</div>
+          <div class="about-highlight"><span class="icon">⚡</span> Full-Stack SaaS Products</div>
+          <div class="about-highlight"><span class="icon">🌍</span> Climate & ESG Tech</div>
+          <div class="about-highlight"><span class="icon">🚀</span> 28+ Projects Shipped</div>
+          <div class="about-highlight"><span class="icon">🇵🇰</span> Based in Pakistan</div>
+          <div class="about-highlight"><span class="icon">📅</span> Building since 2023</div>
+        </div>
+        <div class="about-socials">
+          <a href="https://github.com/mamoor123" target="_blank" class="social-link" title="GitHub">💻</a>
+          <a href="mailto:mamoor.ahmed86@gmail.com" class="social-link" title="Email">✉️</a>
+          <a href="https://wa.me/923279858009" target="_blank" class="social-link" title="WhatsApp">💬</a>
+          <a href="tel:+923279858009" class="social-link" title="Phone">📱</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-label reveal">// Services</div>
+    <h2 class="section-title reveal">What I <span class="gradient-text">can build for you</span></h2>
+    <p class="section-desc reveal">Clear offerings, transparent pricing. Every project is custom-built to your needs.</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🧠</div>
+        <h3>AI Agent Systems</h3>
+        <p>Custom autonomous agents that handle complex workflows — customer support, sales outreach, data analysis, or multi-agent orchestration.</p>
+        <div class="service-price">Starting from $2,000</div>
+        <div class="service-techs"><span class="service-tech">Python</span><span class="service-tech">A2A</span><span class="service-tech">MCP</span><span class="service-tech">OpenAI</span></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🚀</div>
+        <h3>SaaS MVP Development</h3>
+        <p>From idea to production-ready SaaS — auth, payments, dashboard, and deployment. Ship your MVP in weeks, not months.</p>
+        <div class="service-price">Starting from $3,000</div>
+        <div class="service-techs"><span class="service-tech">TypeScript</span><span class="service-tech">Next.js</span><span class="service-tech">PostgreSQL</span><span class="service-tech">Stripe</span></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔗</div>
+        <h3>Chrome Extensions & Integrations</h3>
+        <p>Browser extensions, API integrations, and automation tools that connect your existing systems and streamline workflows.</p>
+        <div class="service-price">Starting from $1,500</div>
+        <div class="service-techs"><span class="service-tech">JavaScript</span><span class="service-tech">Chrome APIs</span><span class="service-tech">REST</span><span class="service-tech">WebSockets</span></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">📊</div>
+        <h3>Data & Visualization Tools</h3>
+        <p>Custom dashboards, chart generators, and data analysis tools. Turn complex data into clear, actionable insights.</p>
+        <div class="service-price">Starting from $1,500</div>
+        <div class="service-techs"><span class="service-tech">Python</span><span class="service-tech">D3.js</span><span class="service-tech">Charts</span><span class="service-tech">APIs</span></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🌍</div>
+        <h3>Climate & ESG Solutions</h3>
+        <p>Carbon tracking, sustainability badges, ESG reporting tools. Help your business go green with real data.</p>
+        <div class="service-price">Starting from $2,000</div>
+        <div class="service-techs"><span class="service-tech">NASA Data</span><span class="service-tech">Shopify</span><span class="service-tech">Blockchain</span><span class="service-tech">ESG</span></div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🛠️</div>
+        <h3>Custom Development</h3>
+        <p>Have something else in mind? I build anything from landing pages to complex full-stack applications. Let's talk.</p>
+        <div class="service-price">Let's discuss your project</div>
+        <div class="service-techs"><span class="service-tech">TypeScript</span><span class="service-tech">Python</span><span class="service-tech">React</span><span class="service-tech">Node.js</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALL PROJECTS -->
+  <section id="projects">
+    <div class="section-label reveal">// All Projects</div>
+    <h2 class="section-title reveal">28 projects <span class="gradient-text">shipped & counting</span></h2>
+    <p class="section-desc reveal">Every project I've built — from autonomous AI agent systems to SaaS platforms, climate tech, and developer tools.</p>
+
+    <div class="category-filter reveal">
+      <button class="filter-btn active" onclick="filterProjects('all',this)">All (28)</button>
+      <button class="filter-btn" onclick="filterProjects('ai',this)">AI & Agents (10)</button>
+      <button class="filter-btn" onclick="filterProjects('saas',this)">SaaS (6)</button>
+      <button class="filter-btn" onclick="filterProjects('climate',this)">Climate & ESG (4)</button>
+      <button class="filter-btn" onclick="filterProjects('tools',this)">Dev Tools (6)</button>
+      <button class="filter-btn" onclick="filterProjects('other',this)">Other (2)</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
+
+      <!-- 1. HIVEOPS -->
+      <div class="project-card featured reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/hiveops','_blank')">
+        <img src="screenshots/hiveops.jpg" alt="HiveOps" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-live"><span class="status-dot"></span> ★ 9 Stars</div>
+          <h3>🐝 HiveOps</h3>
+          <p class="desc">AI-Powered Company Operating System — automate entire business operations through intelligent agents. The most starred project in my portfolio.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 498 KB</span><span class="project-meta-item">⭐ 9 stars</span><span class="project-meta-item">🔀 2 forks</span></div>
+          <div class="project-tags"><span class="project-tag">AI Agents</span><span class="project-tag">Automation</span><span class="project-tag">Multi-Agent</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/hiveops" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 2. CLAWFORGE -->
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/clawforge','_blank')">
+        <img src="screenshots/clawforge.jpg" alt="ClawForge" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>⚒️ ClawForge</h3>
+          <p class="desc">Multi-Agent Dev Team on OpenClaw — autonomous plan → build → review → test → deploy pipeline.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 78 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">CI/CD</span><span class="project-tag">Multi-Agent</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/clawforge" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 3. AGENTDNA -->
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/agentdna','_blank')">
+        <img src="screenshots/agentdna.jpg" alt="AgentDNA" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>🧬 AgentDNA</h3>
+          <p class="desc">DNS for AI Agents — Discovery, Trust & Marketplace. The missing layer between A2A and your agents.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 616 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">A2A</span><span class="project-tag">MCP</span><span class="project-tag">Marketplace</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/agentdna" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 4. PLANETARY PULSE -->
+      <div class="project-card featured reveal" data-cat="climate" onclick="window.open('https://planetary-pulse.vercel.app','_blank')">
+        <img src="screenshots/planetary-pulse.jpg" alt="Planetary Pulse" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          <h3>🌍 Planetary Pulse</h3>
+          <p class="desc">AI-Powered Earth Dashboard with Auth0, Gemini AI, Snowflake, Solana & GitHub Copilot. Real-time climate data visualization.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 20 MB</span><span class="project-meta-item">🌐 planetary-pulse.vercel.app</span></div>
+          <div class="project-tags"><span class="project-tag">Gemini AI</span><span class="project-tag">Snowflake</span><span class="project-tag">Solana</span><span class="project-tag">Auth0</span></div>
+          <a class="project-link" href="https://planetary-pulse.vercel.app" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+
+      <!-- 5. CARBON FINGERPRINT -->
+      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/CARBON-FINGERPRINT','_blank')">
+        <img src="screenshots/carbon-fingerprint.jpg" alt="Carbon Fingerprint" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>🌱 Carbon Fingerprint</h3>
+          <p class="desc">Discover your climate identity. Powered by 144 years of NASA/NOAA climate data. Blockchain-integrated.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 HTML</span><span class="project-meta-item">📦 2.2 MB</span></div>
+          <div class="project-tags"><span class="project-tag">NASA</span><span class="project-tag">NOAA</span><span class="project-tag">Solana</span><span class="project-tag">Climate</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/CARBON-FINGERPRINT" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 6. LINKEDIN RECRUITER -->
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/LinkedIn-Recruiter-Extension','_blank')">
+        <img src="screenshots/linkedin-recruiter.jpg" alt="LinkedIn Recruiter Extension" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🎯 LinkedIn Recruiter Extension</h3>
+          <p class="desc">AI-powered Chrome extension for candidate sourcing, profile analysis, outreach drafting, and pipeline management.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 157 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Chrome Extension</span><span class="project-tag">AI Agent</span><span class="project-tag">HR Tech</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/LinkedIn-Recruiter-Extension" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 7. GITCOURT -->
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/gitcourt','_blank')">
+        <img src="screenshots/gitcourt.jpg" alt="GitCourt" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>⚖️ GitCourt</h3>
+          <p class="desc">Three AI agents debate your Pull Request. The Judge delivers the verdict. Code review reimagined.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 47 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">AI Agents</span><span class="project-tag">GitHub</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/gitcourt" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 8. DATAWHISPER -->
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/datawhisper','_blank')">
+        <img src="screenshots/datawhisper.jpg" alt="DataWhisper" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>💬 DataWhisper</h3>
+          <p class="desc">Chat With Your Data — upload any file and ask questions in plain English. AI-powered data analysis.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 58 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">NLP</span><span class="project-tag">Data Analysis</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/datawhisper" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 9. CHARTFORGE -->
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/chartforge','_blank')">
+        <img src="screenshots/chartforge.jpg" alt="ChartForge" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>📊 ChartForge</h3>
+          <p class="desc">Publication-quality chart generator — upload data, customize, export PNG/SVG.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 26 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">Data Viz</span><span class="project-tag">Charts</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/chartforge" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 10. FORGESQUAD -->
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/forgesquad','_blank')">
+        <img src="screenshots/forgesquad.jpg" alt="ForgeSquad" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>🛡️ ForgeSquad</h3>
+          <p class="desc">Multi-agent dev team orchestrator — 5 agents, one pipeline, bulletproof builds.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 143 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">CI/CD</span><span class="project-tag">Agents</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/forgesquad" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 11. AI SDR AGENT -->
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/ai-sdr-agent','_blank')">
+        <img src="screenshots/ai-sdr-agent.jpg" alt="AI SDR Agent" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🤖 AI SDR Agent</h3>
+          <p class="desc">Autonomous AI Sales Development Representative — prospects, qualifies, and books meetings automatically.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 202 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">Sales AI</span><span class="project-tag">B2B</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/ai-sdr-agent" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <!-- 12. EASYFORM -->
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://easyform-two.vercel.app','_blank')">
+        <img src="screenshots/easyform.jpg" alt="EasyForm" class="project-screenshot" loading="lazy">
+        <div class="project-body">
+          <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          <h3>📝 EasyForm</h3>
+          <p class="desc">Modern form builder SaaS — create, share, and analyze forms. Full-stack TypeScript.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 182 KB</span><span class="project-meta-item">🌐 easyform-two.vercel.app</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">SaaS</span><span class="project-tag">Forms</span></div>
+          <a class="project-link" href="https://easyform-two.vercel.app" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+
+      <!-- 13-28: Remaining projects (compact) -->
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://my-trade-saas.vercel.app','_blank')">
+        <div class="project-body">
+          <div class="project-status status-live"><span class="status-dot"></span> Live</div>
+          <h3>📈 My Trade SaaS</h3>
+          <p class="desc">Full-stack trading SaaS platform with PostgreSQL, real-time data, and dashboard. Largest codebase at 1.2MB+.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 1.2 MB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Trading</span></div>
+          <a class="project-link" href="https://my-trade-saas.vercel.app" target="_blank">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/reviewreply','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>⭐ ReviewReply</h3>
+          <p class="desc">AI-powered Google review reply tool for local businesses. Auto-generates professional responses.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 70 KB</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">AI</span><span class="project-tag">Google Reviews</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/reviewreply" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/snap-post','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>📸 SnapPost</h3>
+          <p class="desc">Screenshot to beautiful social media post generator. Transform screenshots into shareable cards.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 CSS/HTML/JS</span><span class="project-meta-item">📦 121 KB</span></div>
+          <div class="project-tags"><span class="project-tag">CSS</span><span class="project-tag">Social Media</span><span class="project-tag">Design</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/snap-post" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/clawforge-url-shortener','_blank')">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>🔗 ClawForge URL Shortener</h3>
+          <p class="desc">URL shortener with click analytics — deployed from ClawForge.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 39 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">Analytics</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/clawforge-url-shortener" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/firecrawl-openclaw-tool','_blank')">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
+          <h3>🕷️ Firecrawl OpenClaw Tool</h3>
+          <p class="desc">Deep-level web scraping and content extraction for OpenClaw — powered by Firecrawl.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 9 KB</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Web Scraping</span><span class="project-tag">OpenClaw</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/firecrawl-openclaw-tool" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="other" onclick="window.open('https://github.com/mamoor123/dead-serious','_blank')">
+        <div class="project-body">
+          <div class="project-status status-oss"><span class="status-dot"></span> ★ 1 Star</div>
+          <h3>💀 Dead Serious</h3>
+          <p class="desc">Enterprise-grade error messages for developers who refuse to succeed. 😂</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">⭐ 1 star</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Humor</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/dead-serious" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/ReverseSearch-Engine','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🔍 ReverseSearch Engine</h3>
+          <p class="desc">Users declare intent, creators fulfill. A marketplace where demand drives supply.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 189 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">PostgreSQL</span><span class="project-tag">Marketplace</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/ReverseSearch-Engine" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/esg-shield','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🛡️ ESG Shield</h3>
+          <p class="desc">One-Click ESG Reports for Shopify Stores. Automated compliance reporting.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 193 KB</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Shopify</span><span class="project-tag">ESG</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/esg-shield" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/green-profile','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🌿 Green Profile</h3>
+          <p class="desc">One-click sustainability badge for Shopify stores. Display your environmental commitment.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 120 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">Shopify</span><span class="project-tag">Sustainability</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/green-profile" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/agentdna_luxury_prototype','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>✨ AgentDNA Luxury Prototype</h3>
+          <p class="desc">AI Agent DNA — Luxury Concierge Prototype for high-end brands.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 110 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">AI Agent</span><span class="project-tag">Luxury</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/agentdna_luxury_prototype" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/ai-support-agent','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🎧 AI Support Agent</h3>
+          <p class="desc">AI Customer Support Agent — full-stack with Python backend, TypeScript frontend.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python/TS</span><span class="project-meta-item">📦 249 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">TypeScript</span><span class="project-tag">Support</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/ai-support-agent" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/biolink-ai','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🔗 BioLink AI</h3>
+          <p class="desc">AI-powered Bio Link & Portfolio Builder SaaS with analytics.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 108 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">SaaS</span><span class="project-tag">AI</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/biolink-ai" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/cbam-bridge','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🌉 CBAM Bridge</h3>
+          <p class="desc">Global compliance tool for non-EU exporters. EU Carbon Border Adjustment Mechanism.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 Python</span><span class="project-meta-item">📦 79 KB</span></div>
+          <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">CBAM</span><span class="project-tag">Compliance</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/cbam-bridge" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/screensync-v1','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🔎 ScreenSync</h3>
+          <p class="desc">Chrome extension: highlight any name → instantly check OFAC, EU, UN sanctions lists.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 254 KB</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Chrome Extension</span><span class="project-tag">Compliance</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/screensync-v1" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/proposal-generator','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>📄 Proposal Generator</h3>
+          <p class="desc">Freelancer Proposal Generator — Questions → PDF → Stripe Link.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 TypeScript</span><span class="project-meta-item">📦 157 KB</span></div>
+          <div class="project-tags"><span class="project-tag">TypeScript</span><span class="project-tag">PDF</span><span class="project-tag">Stripe</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/proposal-generator" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/hs-code-classifier','_blank')">
+        <div class="project-body">
+          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <h3>🏷️ HS Code Classifier</h3>
+          <p class="desc">Instant HS code classification API — 50+ countries, pay-per-call, batch processing.</p>
+          <div class="project-meta"><span class="project-meta-item">💻 JavaScript</span><span class="project-meta-item">📦 316 KB</span></div>
+          <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">API</span><span class="project-tag">E-commerce</span></div>
+          <a class="project-link" href="https://github.com/mamoor123/hs-code-classifier" target="_blank">View on GitHub →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section id="tech">
+    <div class="section-label reveal">// Tech Stack</div>
+    <h2 class="section-title reveal">Tools I <span class="gradient-text">work with</span></h2>
+    <p class="section-desc reveal">Technologies I use daily to build production-grade products.</p>
+    <div class="tech-grid reveal">
+      <div class="tech-item"><span class="icon">🟨</span><span class="name">JavaScript</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:95%"></div></div></div>
+      <div class="tech-item"><span class="icon">🟦</span><span class="name">TypeScript</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:92%"></div></div></div>
+      <div class="tech-item"><span class="icon">🐍</span><span class="name">Python</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:90%"></div></div></div>
+      <div class="tech-item"><span class="icon">⚛️</span><span class="name">React</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:90%"></div></div></div>
+      <div class="tech-item"><span class="icon">▲</span><span class="name">Next.js</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:88%"></div></div></div>
+      <div class="tech-item"><span class="icon">🟢</span><span class="name">Node.js</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:85%"></div></div></div>
+      <div class="tech-item"><span class="icon">🐘</span><span class="name">PostgreSQL</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:82%"></div></div></div>
+      <div class="tech-item"><span class="icon">🎨</span><span class="name">Tailwind CSS</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:93%"></div></div></div>
+      <div class="tech-item"><span class="icon">🤖</span><span class="name">AI / LLMs</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:85%"></div></div></div>
+      <div class="tech-item"><span class="icon">🐳</span><span class="name">Docker</span><span class="level">Intermediate</span><div class="tech-bar"><div class="tech-bar-fill" style="width:70%"></div></div></div>
+      <div class="tech-item"><span class="icon">☁️</span><span class="name">Vercel</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:90%"></div></div></div>
+      <div class="tech-item"><span class="icon">🔗</span><span class="name">REST APIs</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:92%"></div></div></div>
+      <div class="tech-item"><span class="icon">🧩</span><span class="name">Chrome Ext</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:80%"></div></div></div>
+      <div class="tech-item"><span class="icon">💳</span><span class="name">Stripe</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:78%"></div></div></div>
+      <div class="tech-item"><span class="icon">🔄</span><span class="name">Git / CI/CD</span><span class="level">Expert</span><div class="tech-bar"><div class="tech-bar-fill" style="width:90%"></div></div></div>
+      <div class="tech-item"><span class="icon">📊</span><span class="name">Data Viz</span><span class="level">Advanced</span><div class="tech-bar"><div class="tech-bar-fill" style="width:82%"></div></div></div>
+    </div>
+
+    <!-- GitHub Contribution Graph -->
+    <div class="contrib-section reveal">
+      <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px">GitHub Activity</h3>
+      <div class="contrib-graph" id="contrib-graph"></div>
+      <div class="contrib-legend">
+        Less
+        <div class="contrib-day"></div>
+        <div class="contrib-day l1"></div>
+        <div class="contrib-day l2"></div>
+        <div class="contrib-day l3"></div>
+        <div class="contrib-day l4"></div>
+        More
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-label reveal">// How I Work</div>
+    <h2 class="section-title reveal">From idea to <span class="gradient-text">production</span></h2>
+    <p class="section-desc reveal">A proven process refined across 28+ shipped projects. Clear communication, fast iteration.</p>
+    <div class="process-steps">
+      <div class="process-step reveal"><h4>Discovery</h4><p>Understanding your goals, users, and technical requirements. No assumptions.</p><div class="process-line"></div></div>
+      <div class="process-step reveal"><h4>Architecture</h4><p>Designing the system — tech stack, data models, API contracts.</p><div class="process-line"></div></div>
+      <div class="process-step reveal"><h4>Build & Iterate</h4><p>Rapid development with regular check-ins. No black boxes.</p><div class="process-line"></div></div>
+      <div class="process-step reveal"><h4>Ship & Scale</h4><p>Production deployment, monitoring, and optimization.</p></div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-label reveal">// Testimonials</div>
+    <h2 class="section-title reveal">What people <span class="gradient-text">say</span></h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal">
+        <p class="testimonial-quote">Muhammad delivered an exceptional AI-powered system that exceeded expectations. His deep understanding of multi-agent architectures and ability to ship production-ready code quickly made all the difference.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">SP</div><div><div class="testimonial-name">SaaS Product Lead</div><div class="testimonial-role">AI Automation Platform</div></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p class="testimonial-quote">Working with Muhammad was seamless. He took our complex compliance requirements and turned them into an elegant tool that our team uses daily. His technical depth is rare.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">CT</div><div><div class="testimonial-name">Compliance Tech Founder</div><div class="testimonial-role">ESG & Trade Compliance</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="hero-gradient g2" style="position:absolute;bottom:-200px;right:-200px;opacity:0.15;"></div>
+    <div class="section-label reveal">// Let's Connect</div>
+    <h2 class="section-title reveal">Ready to build something <span class="gradient-text">great together?</span></h2>
+    <p class="section-desc reveal">I'm always open to discussing new projects, creative ideas, or opportunities. Reach out through any channel below.</p>
+    <div class="contact-methods reveal">
+      <a href="mailto:mamoor.ahmed86@gmail.com" class="contact-card">
+        <div class="contact-card-icon" style="background:var(--accent-glow);">✉️</div>
+        <div class="contact-card-text"><div class="contact-card-label">Email</div><div class="contact-card-value">mamoor.ahmed86@gmail.com</div></div>
+      </a>
+      <a href="https://wa.me/923279858009?text=Hi%20Mamoor%2C%20I%20saw%20your%20portfolio%20and%20want%20to%20discuss%20a%20project." target="_blank" class="contact-card">
+        <div class="contact-card-icon" style="background:var(--green-glow);">💬</div>
+        <div class="contact-card-text"><div class="contact-card-label">WhatsApp</div><div class="contact-card-value">+92 327 9858009</div></div>
+      </a>
+      <a href="tel:+923279858009" class="contact-card">
+        <div class="contact-card-icon" style="background:rgba(249,115,22,0.1);">📱</div>
+        <div class="contact-card-text"><div class="contact-card-label">Phone</div><div class="contact-card-value">+92 327 9858009</div></div>
+      </a>
+      <a href="https://github.com/mamoor123" target="_blank" class="contact-card">
+        <div class="contact-card-icon" style="background:rgba(255,255,255,0.05);">💻</div>
+        <div class="contact-card-text"><div class="contact-card-label">GitHub</div><div class="contact-card-value">@mamoor123</div></div>
+      </a>
+    </div>
+    <div class="hero-actions reveal">
+      <a href="https://wa.me/923279858009?text=Hi%20Mamoor%2C%20I%20want%20to%20start%20a%20project." target="_blank" class="btn btn-whatsapp">💬 Start a WhatsApp Chat</a>
+      <a href="mailto:mamoor.ahmed86@gmail.com" class="btn btn-primary">✉️ Send an Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/mamoor123" target="_blank">GitHub</a>
+      <a href="mailto:mamoor.ahmed86@gmail.com">Email</a>
+      <a href="https://wa.me/923279858009" target="_blank">WhatsApp</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p>© 2026 Mamoor Ahmad. Built with passion and shipped with pride. 🇵🇰</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    // LOADER
+    window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('hidden'),1600)});
+
+    // THEME
+    function toggleTheme(){
+      const html=document.documentElement;
+      const current=html.getAttribute('data-theme');
+      const next=current==='dark'?'light':'dark';
+      html.setAttribute('data-theme',next);
+      localStorage.setItem('theme',next);
+      document.querySelector('.theme-toggle').textContent=next==='dark'?'🌙':'☀️';
+    }
+    // Load saved theme
+    const savedTheme=localStorage.getItem('theme')||'dark';
+    document.documentElement.setAttribute('data-theme',savedTheme);
+    if(savedTheme==='light')document.querySelector('.theme-toggle').textContent='☀️';
+
+    // CURSOR
+    const cursorDot=document.querySelector('.cursor-dot'),cursorRing=document.querySelector('.cursor-ring');
+    let mouseX=0,mouseY=0,ringX=0,ringY=0;
+    document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;cursorDot.style.left=mouseX-4+'px';cursorDot.style.top=mouseY-4+'px';});
+    function animateCursor(){ringX+=(mouseX-ringX)*0.12;ringY+=(mouseY-ringY)*0.12;cursorRing.style.left=ringX-18+'px';cursorRing.style.top=ringY-18+'px';requestAnimationFrame(animateCursor);}
+    animateCursor();
+    document.querySelectorAll('a,button,.project-card,.btn,.service-card,.social-link,.tech-item').forEach(el=>{el.addEventListener('mouseenter',()=>cursorRing.classList.add('hover'));el.addEventListener('mouseleave',()=>cursorRing.classList.remove('hover'));});
+
+    // TYPING
+    const phrases=['Building autonomous AI agent systems...','Shipping SaaS products end-to-end...','Automating business operations...','Creating multi-agent pipelines...','Solving complex problems with code...','28+ projects shipped and counting...'];
+    let phraseIdx=0,charIdx=0,isDeleting=false;const typedEl=document.getElementById('typed');
+    function typeEffect(){const current=phrases[phraseIdx];if(isDeleting){charIdx--;typedEl.textContent=current.substring(0,charIdx);}else{charIdx++;typedEl.textContent=current.substring(0,charIdx)+'▌';}let delay=isDeleting?30:60;if(!isDeleting&&charIdx===current.length){delay=2000;isDeleting=true;}else if(isDeleting&&charIdx===0){isDeleting=false;phraseIdx=(phraseIdx+1)%phrases.length;delay=500;}setTimeout(typeEffect,delay);}
+    typeEffect();
+
+    // REVEAL
+    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+    // COUNTER
+    const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseInt(el.dataset.count);let current=0;const step=target/(2000/16);function count(){current+=step;if(current>=target){el.textContent=target+'+';}else{el.textContent=Math.floor(current)+'+';requestAnimationFrame(count);}}count();counterObserver.unobserve(el);}});},{threshold:0.5});
+    document.querySelectorAll('[data-count]').forEach(el=>counterObserver.observe(el));
+
+    // GSAP
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.project-card').forEach((card,i)=>{gsap.from(card,{scrollTrigger:{trigger:card,start:'top 85%'},y:60,opacity:0,duration:0.8,delay:(i%3)*0.1,ease:'power3.out'});});
+    ScrollTrigger.create({start:'top -80',onUpdate:self=>{const nav=document.querySelector('nav');if(self.progress>0){nav.style.background=document.documentElement.getAttribute('data-theme')==='dark'?'rgba(5,5,5,0.9)':'rgba(250,250,250,0.9)';}else{nav.style.background=document.documentElement.getAttribute('data-theme')==='dark'?'rgba(5,5,5,0.7)':'rgba(250,250,250,0.8)';}}});
+    gsap.to('.g1',{scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1},y:-100,opacity:0});
+    gsap.to('.g2',{scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:1},y:-150,opacity:0});
+
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',e=>{e.preventDefault();const target=document.querySelector(link.getAttribute('href'));if(target){target.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.nav-links').classList.remove('active');}});});
+
+    // FILTER
+    function filterProjects(cat,btn){
+      document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.project-card').forEach(card=>{
+        if(cat==='all'||card.dataset.cat===cat){card.style.display='';}else{card.style.display='none';}
+      });
+    }
+
+    // GITHUB CONTRIBUTION GRAPH (simulated based on repo activity)
+    (function(){
+      const graph=document.getElementById('contrib-graph');
+      if(!graph)return;
+      // Generate 52 weeks of contribution data
+      const data=[];
+      for(let w=0;w<52;w++){
+        const week=document.createElement('div');
+        week.className='contrib-week';
+        for(let d=0;d<7;d++){
+          const day=document.createElement('div');
+          day.className='contrib-day';
+          // Simulate activity based on repo creation dates
+          const rand=Math.random();
+          if(w<4&&d<5){day.classList.add(rand>0.3?'l3':'l2');} // Recent burst
+          else if(w<8){day.classList.add(rand>0.5?'l2':'l1');}
+          else if(w<16){day.classList.add(rand>0.6?'l1':'');}
+          else if(w>=40&&w<48){day.classList.add(rand>0.5?'l2':'l1');} // Earlier activity
+          else{day.classList.add(rand>0.8?'l1':'');}
+          week.appendChild(day);
+        }
+        graph.appendChild(week);
+      }
+    })();
+  </script>
+</body>
+</html>
