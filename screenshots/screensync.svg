@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a"/>
+      <stop offset="100%" style="stop-color:#111"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+  <!-- Top bar -->
+  <rect x="0" y="0" width="800" height="48" fill="#111" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#111"/>
+  <circle cx="24" cy="24" r="6" fill="#ff5f57"/>
+  <circle cx="44" cy="24" r="6" fill="#febc2e"/>
+  <circle cx="64" cy="24" r="6" fill="#28c840"/>
+  <!-- Emoji -->
+  <text x="400" y="200" font-size="72" text-anchor="middle" dominant-baseline="middle">🔎</text>
+  <!-- Title -->
+  <text x="400" y="280" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" fill="#e8e8e8" text-anchor="middle">ScreenSync</text>
+  <!-- Tech -->
+  <text x="400" y="320" font-family="JetBrains Mono,monospace" font-size="13" fill="#888" text-anchor="middle">Chrome Extension · OFAC · Compliance</text>
+  <!-- Accent bar -->
+  <rect x="300" y="350" width="200" height="3" fill="url(#accent)" rx="2"/>
+  <!-- Decorative dots -->
+  <circle cx="100" cy="420" r="4" fill="#f97316" opacity="0.3"/>
+  <circle cx="700" cy="120" r="6" fill="#8b5cf6" opacity="0.2"/>
+  <circle cx="650" cy="400" r="3" fill="#f97316" opacity="0.4"/>
+</svg>
