@@ -484,18 +484,18 @@
     <p class="section-desc reveal">Every project I've built — from autonomous AI agent systems to SaaS platforms, climate tech, and developer tools.</p>
 
     <div class="category-filter reveal">
-      <button class="filter-btn active" onclick="filterProjects('all',this)" aria-label="Show all projects">All (28)</button>
-      <button class="filter-btn" onclick="filterProjects('ai',this)" aria-label="Show AI projects">AI & Agents (10)</button>
-      <button class="filter-btn" onclick="filterProjects('saas',this)" aria-label="Show SaaS projects">SaaS (6)</button>
-      <button class="filter-btn" onclick="filterProjects('climate',this)" aria-label="Show climate projects">Climate & ESG (4)</button>
-      <button class="filter-btn" onclick="filterProjects('tools',this)" aria-label="Show dev tools">Dev Tools (6)</button>
-      <button class="filter-btn" onclick="filterProjects('other',this)" aria-label="Show other projects">Other (2)</button>
+      <button class="filter-btn active" data-filter="all" aria-label="Show all projects">All (28)</button>
+      <button class="filter-btn" data-filter="ai" aria-label="Show AI projects">AI & Agents (10)</button>
+      <button class="filter-btn" data-filter="saas" aria-label="Show SaaS projects">SaaS (6)</button>
+      <button class="filter-btn" data-filter="climate" aria-label="Show climate projects">Climate & ESG (4)</button>
+      <button class="filter-btn" data-filter="tools" aria-label="Show dev tools">Dev Tools (6)</button>
+      <button class="filter-btn" data-filter="other" aria-label="Show other projects">Other (2)</button>
     </div>
 
     <div class="projects-grid" id="projects-grid">
 
       <!-- 1. HIVEOPS -->
-      <div class="project-card featured reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/hiveops','_blank')">
+      <div class="project-card featured reveal" data-cat="ai" data-link="https://github.com/mamoor123/hiveops">
         <img src="screenshots/hiveops.jpg" alt="HiveOps" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-live"><span class="status-dot"></span> ★ 9 Stars</div>
@@ -508,7 +508,7 @@
       </div>
 
       <!-- 2. CLAWFORGE -->
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/clawforge','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/clawforge">
         <img src="screenshots/clawforge.jpg" alt="ClawForge" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -521,7 +521,7 @@
       </div>
 
       <!-- 3. AGENTDNA -->
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/agentdna','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/agentdna">
         <img src="screenshots/agentdna.jpg" alt="AgentDNA" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -534,7 +534,7 @@
       </div>
 
       <!-- 4. PLANETARY PULSE -->
-      <div class="project-card featured reveal" data-cat="climate" onclick="window.open('https://planetary-pulse.vercel.app','_blank')">
+      <div class="project-card featured reveal" data-cat="climate" data-link="https://planetary-pulse.vercel.app">
         <img src="screenshots/planetary-pulse.jpg" alt="Planetary Pulse" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-live"><span class="status-dot"></span> Live</div>
@@ -547,7 +547,7 @@
       </div>
 
       <!-- 5. CARBON FINGERPRINT -->
-      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/CARBON-FINGERPRINT','_blank')">
+      <div class="project-card reveal" data-cat="climate" data-link="https://github.com/mamoor123/CARBON-FINGERPRINT">
         <img src="screenshots/carbon-fingerprint.jpg" alt="Carbon Fingerprint" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -560,7 +560,7 @@
       </div>
 
       <!-- 6. LINKEDIN RECRUITER -->
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/LinkedIn-Recruiter-Extension','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/LinkedIn-Recruiter-Extension">
         <img src="screenshots/linkedin-recruiter.jpg" alt="LinkedIn Recruiter Extension" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
@@ -573,7 +573,7 @@
       </div>
 
       <!-- 7. GITCOURT -->
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/gitcourt','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/gitcourt">
         <img src="screenshots/gitcourt.jpg" alt="GitCourt" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -586,7 +586,7 @@
       </div>
 
       <!-- 8. DATAWHISPER -->
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/datawhisper','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/datawhisper">
         <img src="screenshots/datawhisper.jpg" alt="DataWhisper" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -599,7 +599,7 @@
       </div>
 
       <!-- 9. CHARTFORGE -->
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/chartforge','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/chartforge">
         <img src="screenshots/chartforge.jpg" alt="ChartForge" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -612,7 +612,7 @@
       </div>
 
       <!-- 10. FORGESQUAD -->
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/forgesquad','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/forgesquad">
         <img src="screenshots/forgesquad.jpg" alt="ForgeSquad" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
@@ -625,7 +625,7 @@
       </div>
 
       <!-- 11. AI SDR AGENT -->
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/ai-sdr-agent','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/ai-sdr-agent">
         <img src="screenshots/ai-sdr-agent.jpg" alt="AI SDR Agent" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
@@ -638,7 +638,7 @@
       </div>
 
       <!-- 12. EASYFORM -->
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://easyform-two.vercel.app','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://easyform-two.vercel.app">
         <img src="screenshots/easyform.jpg" alt="EasyForm" class="project-screenshot" loading="lazy">
         <div class="project-body">
           <div class="project-status status-live"><span class="status-dot"></span> Live</div>
@@ -651,7 +651,7 @@
       </div>
 
       <!-- 13-28: Remaining projects (compact) -->
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://my-trade-saas.vercel.app','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://my-trade-saas.vercel.app">
         <div class="project-body">
           <div class="project-status status-live"><span class="status-dot"></span> Live</div>
           <h3>📈 My Trade SaaS</h3>
@@ -662,7 +662,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/reviewreply','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://github.com/mamoor123/reviewreply">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>⭐ ReviewReply</h3>
@@ -673,7 +673,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/snap-post','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/snap-post">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
           <h3>📸 SnapPost</h3>
@@ -684,7 +684,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/clawforge-url-shortener','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/clawforge-url-shortener">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
           <h3>🔗 ClawForge URL Shortener</h3>
@@ -695,7 +695,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/firecrawl-openclaw-tool','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/firecrawl-openclaw-tool">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
           <h3>🕷️ Firecrawl OpenClaw Tool</h3>
@@ -706,7 +706,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="other" onclick="window.open('https://github.com/mamoor123/dead-serious','_blank')">
+      <div class="project-card reveal" data-cat="other" data-link="https://github.com/mamoor123/dead-serious">
         <div class="project-body">
           <div class="project-status status-oss"><span class="status-dot"></span> ★ 1 Star</div>
           <h3>💀 Dead Serious</h3>
@@ -717,7 +717,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/ReverseSearch-Engine','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://github.com/mamoor123/ReverseSearch-Engine">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🔍 ReverseSearch Engine</h3>
@@ -728,7 +728,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/esg-shield','_blank')">
+      <div class="project-card reveal" data-cat="climate" data-link="https://github.com/mamoor123/esg-shield">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🛡️ ESG Shield</h3>
@@ -739,7 +739,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/green-profile','_blank')">
+      <div class="project-card reveal" data-cat="climate" data-link="https://github.com/mamoor123/green-profile">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🌿 Green Profile</h3>
@@ -750,7 +750,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/agentdna_luxury_prototype','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/agentdna_luxury_prototype">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>✨ AgentDNA Luxury Prototype</h3>
@@ -761,7 +761,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="ai" onclick="window.open('https://github.com/mamoor123/ai-support-agent','_blank')">
+      <div class="project-card reveal" data-cat="ai" data-link="https://github.com/mamoor123/ai-support-agent">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🎧 AI Support Agent</h3>
@@ -772,7 +772,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/biolink-ai','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://github.com/mamoor123/biolink-ai">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🔗 BioLink AI</h3>
@@ -783,7 +783,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="climate" onclick="window.open('https://github.com/mamoor123/cbam-bridge','_blank')">
+      <div class="project-card reveal" data-cat="climate" data-link="https://github.com/mamoor123/cbam-bridge">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🌉 CBAM Bridge</h3>
@@ -794,7 +794,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/screensync-v1','_blank')">
+      <div class="project-card reveal" data-cat="tools" data-link="https://github.com/mamoor123/screensync-v1">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🔎 ScreenSync</h3>
@@ -805,7 +805,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/proposal-generator','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://github.com/mamoor123/proposal-generator">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>📄 Proposal Generator</h3>
@@ -816,7 +816,7 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="saas" onclick="window.open('https://github.com/mamoor123/hs-code-classifier','_blank')">
+      <div class="project-card reveal" data-cat="saas" data-link="https://github.com/mamoor123/hs-code-classifier">
         <div class="project-body">
           <div class="project-status status-building"><span class="status-dot"></span> Private</div>
           <h3>🏷️ HS Code Classifier</h3>
@@ -1097,13 +1097,15 @@
     document.documentElement.setAttribute('data-theme',savedTheme);
     if(savedTheme==='light')document.querySelector('.theme-toggle').textContent='☀️';
 
-    // CURSOR
-    const cursorDot=document.querySelector('.cursor-dot'),cursorRing=document.querySelector('.cursor-ring');
-    let mouseX=0,mouseY=0,ringX=0,ringY=0;
-    document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;cursorDot.style.left=mouseX-4+'px';cursorDot.style.top=mouseY-4+'px';});
-    function animateCursor(){ringX+=(mouseX-ringX)*0.12;ringY+=(mouseY-ringY)*0.12;cursorRing.style.left=ringX-18+'px';cursorRing.style.top=ringY-18+'px';requestAnimationFrame(animateCursor);}
-    animateCursor();
-    document.querySelectorAll('a,button,.project-card,.btn,.service-card,.social-link,.tech-item').forEach(el=>{el.addEventListener('mouseenter',()=>cursorRing.classList.add('hover'));el.addEventListener('mouseleave',()=>cursorRing.classList.remove('hover'));});
+    // CURSOR (desktop only — skip on touch devices)
+    if(!('ontouchstart' in window)){
+      const cursorDot=document.querySelector('.cursor-dot'),cursorRing=document.querySelector('.cursor-ring');
+      let mouseX=0,mouseY=0,ringX=0,ringY=0;
+      document.addEventListener('mousemove',e=>{mouseX=e.clientX;mouseY=e.clientY;cursorDot.style.left=mouseX-4+'px';cursorDot.style.top=mouseY-4+'px';});
+      function animateCursor(){ringX+=(mouseX-ringX)*0.12;ringY+=(mouseY-ringY)*0.12;cursorRing.style.left=ringX-18+'px';cursorRing.style.top=ringY-18+'px';requestAnimationFrame(animateCursor);}
+      animateCursor();
+      document.querySelectorAll('a,button,.project-card,.btn,.service-card,.social-link,.tech-item').forEach(el=>{el.addEventListener('mouseenter',()=>cursorRing.classList.add('hover'));el.addEventListener('mouseleave',()=>cursorRing.classList.remove('hover'));});
+    }
 
     // TYPING
     const phrases=['Building autonomous AI agent systems...','Shipping SaaS products end-to-end...','Automating business operations...','Creating multi-agent pipelines...','Solving complex problems with code...','28+ projects shipped and counting...'];
@@ -1129,14 +1131,23 @@
     // SMOOTH SCROLL
     document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',e=>{e.preventDefault();const target=document.querySelector(link.getAttribute('href'));if(target){target.scrollIntoView({behavior:'smooth',block:'start'});document.querySelector('.nav-links').classList.remove('active');}});});
 
-    // FILTER
-    function filterProjects(cat,btn){
+    // FILTER (event delegation)
+    document.querySelector('.category-filter').addEventListener('click',e=>{
+      const btn=e.target.closest('.filter-btn');
+      if(!btn) return;
+      const cat=btn.dataset.filter;
       document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
       btn.classList.add('active');
       document.querySelectorAll('.project-card').forEach(card=>{
-        if(cat==='all'||card.dataset.cat===cat){card.style.display='';}else{card.style.display='none';}
+        card.style.display=(cat==='all'||card.dataset.cat===cat)?'':'none';
       });
-    }
+    });
+
+    // PROJECT CARDS (event delegation)
+    document.getElementById('projects-grid').addEventListener('click',e=>{
+      const card=e.target.closest('.project-card');
+      if(card&&card.dataset.link) window.open(card.dataset.link,'_blank');
+    });
 
     // GITHUB CONTRIBUTION GRAPH (real data)
     (async function(){
