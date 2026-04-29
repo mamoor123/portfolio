@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0f1a"/>
+      <stop offset="100%" stop-color="#0d1929"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    <radialGradient id="earth" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="40%" stop-color="#16a34a"/>
+      <stop offset="70%" stop-color="#0d6efd"/>
+      <stop offset="100%" stop-color="#1e3a5f"/>
+    </radialGradient>
+    <filter id="glow-filter">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <!-- Grid lines -->
+  <g opacity="0.06" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="75" x2="800" y2="75"/><line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="225" x2="800" y2="225"/><line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="375" x2="800" y2="375"/>
+    <line x1="133" y1="0" x2="133" y2="450"/><line x1="266" y1="0" x2="266" y2="450"/>
+    <line x1="400" y1="0" x2="400" y2="450"/><line x1="533" y1="0" x2="533" y2="450"/>
+    <line x1="666" y1="0" x2="666" y2="450"/>
+  </g>
+  <!-- Earth icon -->
+  <circle cx="400" cy="190" r="80" fill="url(#earth)" opacity="0.9" filter="url(#glow-filter)"/>
+  <ellipse cx="400" cy="190" rx="80" ry="25" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.4" transform="rotate(-20 400 190)"/>
+  <ellipse cx="400" cy="190" rx="80" ry="25" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.3" transform="rotate(30 400 190)"/>
+  <!-- Title -->
+  <text x="400" y="100" text-anchor="middle" fill="#fff" font-family="Inter,sans-serif" font-size="28" font-weight="800" letter-spacing="-1">Planetary Pulse</text>
+  <text x="400" y="125" text-anchor="middle" fill="#06b6d4" font-family="Inter,sans-serif" font-size="13" font-weight="500">AI-Powered Earth Dashboard</text>
+  <!-- Stats cards -->
+  <g transform="translate(80,310)">
+    <rect width="150" height="70" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="75" y="28" text-anchor="middle" fill="#22c55e" font-family="Inter,sans-serif" font-size="20" font-weight="800">+1.2°C</text>
+    <text x="75" y="48" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">Global Temp Rise</text>
+  </g>
+  <g transform="translate(250,310)">
+    <rect width="150" height="70" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="75" y="28" text-anchor="middle" fill="#f97316" font-family="Inter,sans-serif" font-size="20" font-weight="800">421 ppm</text>
+    <text x="75" y="48" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">CO₂ Levels</text>
+  </g>
+  <g transform="translate(420,310)">
+    <rect width="150" height="70" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="75" y="28" text-anchor="middle" fill="#3b82f6" font-family="Inter,sans-serif" font-size="20" font-weight="800">3.4mm/yr</text>
+    <text x="75" y="48" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">Sea Level Rise</text>
+  </g>
+  <g transform="translate(590,310)">
+    <rect width="150" height="70" rx="10" fill="#111827" stroke="#1f2937" stroke-width="1"/>
+    <text x="75" y="28" text-anchor="middle" fill="#ec4899" font-family="Inter,sans-serif" font-size="20" font-weight="800">144 yrs</text>
+    <text x="75" y="48" text-anchor="middle" fill="#9ca3af" font-family="Inter,sans-serif" font-size="11">NASA Data</text>
+  </g>
+  <!-- Mini chart -->
+  <g transform="translate(120,405)">
+    <polyline points="0,25 30,20 60,22 90,15 120,18 150,10 180,12 210,8 240,14 270,6 300,9 330,4 360,7 390,3 420,5 450,2 480,4 510,1 540,3" fill="none" stroke="url(#glow)" stroke-width="2" filter="url(#glow-filter)"/>
+    <polyline points="0,25 30,20 60,22 90,15 120,18 150,10 180,12 210,8 240,14 270,6 300,9 330,4 360,7 390,3 420,5 450,2 480,4 510,1 540,3 540,25 0,25" fill="url(#glow)" opacity="0.1"/>
+  </g>
+  <text x="400" y="440" text-anchor="middle" fill="#4b5563" font-family="Inter,sans-serif" font-size="10">Real-time climate data visualization • Gemini AI • Snowflake • Auth0</text>
+</svg>
