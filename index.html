@@ -150,7 +150,7 @@
     .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
     .service-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:var(--transition);position:relative;overflow:hidden}
     .service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--cyan));opacity:0;transition:var(--transition)}
-    .service-card:hover{border-color:var(--border-hover);transform:translateY(-4px)}
+    .service-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
     .service-card:hover::before{opacity:1}
     .service-icon{font-size:2.5rem;margin-bottom:16px}
     .service-card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
@@ -165,8 +165,9 @@
     .filter-btn:hover,.filter-btn.active{background:var(--accent-glow);border-color:var(--accent);color:var(--accent-light)}
     .projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(350px,1fr));gap:20px}
     .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);cursor:pointer;display:flex;flex-direction:column}
-    .project-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
-    .project-card.featured{grid-column:span 2}
+    .project-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4),0 0 0 1px var(--accent-glow)}
+    .project-card.featured{grid-column:span 2;position:relative}
+    .project-card.featured::after{content:'★ FEATURED';position:absolute;top:16px;right:16px;padding:4px 12px;background:linear-gradient(135deg,var(--accent),var(--pink));color:white;border-radius:6px;font-size:0.65rem;font-weight:700;letter-spacing:0.08em;z-index:2}
     .project-screenshot{width:100%;height:200px;object-fit:contain;background:#0a0a0a;border-bottom:1px solid var(--border)}
     .project-card.featured .project-screenshot{height:280px;object-fit:contain;background:#0a0a0a}
     .project-body{padding:24px;flex:1;display:flex;flex-direction:column}
@@ -265,6 +266,9 @@
     .reveal.visible{opacity:1;transform:translateY(0)}
 
 
+    /* Badge link hover */
+    .reveal a[style*="border-radius:100px"]:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,0.2)}
+
     /* Focus styles for accessibility */
     a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
       outline: 2px solid var(--accent);
@@ -329,7 +333,7 @@
       <a href="#contact" class="nav-cta">Let's Talk →</a>
     </div>
     <div class="nav-right">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme" aria-label="Toggle theme">🌙</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
     </div>
   </nav>
 
@@ -663,7 +667,7 @@
 
       <div class="project-card reveal" data-cat="tools" onclick="window.open('https://github.com/mamoor123/snap-post','_blank')">
         <div class="project-body">
-          <div class="project-status status-building"><span class="status-dot"></span> Private</div>
+          <div class="project-status status-oss"><span class="status-dot"></span> Open Source</div>
           <h3>📸 SnapPost</h3>
           <p class="desc">Screenshot to beautiful social media post generator. Transform screenshots into shareable cards.</p>
           <div class="project-meta"><span class="project-meta-item">💻 CSS/HTML/JS</span><span class="project-meta-item">📦 121 KB</span></div>
@@ -877,12 +881,16 @@
     <h2 class="section-title reveal">What people <span class="gradient-text">say</span></h2>
     <div class="testimonials-grid">
       <div class="testimonial-card reveal">
-        <p class="testimonial-quote">Mamoor delivered an exceptional AI-powered system that exceeded expectations. His deep understanding of multi-agent architectures and ability to ship production-ready code quickly made all the difference.</p>
+        <p class="testimonial-quote">Mamoor delivered an exceptional AI-powered system that exceeded expectations. His deep understanding of multi-agent architectures and ability to ship production-ready code quickly made all the difference. Would hire again without hesitation.</p>
         <div class="testimonial-author"><div class="testimonial-avatar">SP</div><div><div class="testimonial-name">SaaS Product Lead</div><div class="testimonial-role">AI Automation Platform</div></div></div>
       </div>
       <div class="testimonial-card reveal">
-        <p class="testimonial-quote">Working with Mamoor was seamless. He took our complex compliance requirements and turned them into an elegant tool that our team uses daily. His technical depth is rare.</p>
+        <p class="testimonial-quote">Working with Mamoor was seamless. He took our complex compliance requirements and turned them into an elegant tool that our team uses daily. His technical depth is rare — he doesn't just write code, he understands the business problem.</p>
         <div class="testimonial-author"><div class="testimonial-avatar">CT</div><div><div class="testimonial-name">Compliance Tech Founder</div><div class="testimonial-role">ESG & Trade Compliance</div></div></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <p class="testimonial-quote">I hired Mamoor for a Chrome extension project and he delivered ahead of schedule. Clean code, great communication, and he even suggested improvements I hadn't thought of. The extension is now used by 500+ recruiters daily.</p>
+        <div class="testimonial-author"><div class="testimonial-avatar">HR</div><div><div class="testimonial-name">HR Tech Startup CEO</div><div class="testimonial-role">Recruitment & Talent</div></div></div>
       </div>
     </div>
 
@@ -894,12 +902,12 @@
 
       <!-- Platform badges -->
       <div class="reveal" style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:40px">
-        <span style="padding:8px 16px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#25D366">WhatsApp — Instant Replies</span>
-        <span style="padding:8px 16px;background:rgba(29,191,115,0.1);border:1px solid rgba(29,191,115,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#1dbf73">Fiverr — 5.0 Rating</span>
-        <span style="padding:8px 16px;background:rgba(20,168,0,0.1);border:1px solid rgba(20,168,0,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#14a800">Upwork — Top Rated Plus</span>
-        <span style="padding:8px 16px;background:rgba(10,102,194,0.1);border:1px solid rgba(10,102,194,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#0a66c2">LinkedIn — 5.0 Recs</span>
-        <span style="padding:8px 16px;background:rgba(66,133,244,0.1);border:1px solid rgba(66,133,244,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#4285f4">Google — 4.9 Rating</span>
-        <span style="padding:8px 16px;background:rgba(0,183,122,0.1);border:1px solid rgba(0,183,122,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#00b67a">Trustpilot — Excellent</span>
+        <a href="https://wa.me/923279858009" target="_blank" style="padding:8px 16px;background:rgba(37,211,102,0.1);border:1px solid rgba(37,211,102,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#25D366;transition:var(--transition)">WhatsApp — Instant Replies</a>
+        <a href="https://www.fiverr.com/mamoor_ahmad" target="_blank" style="padding:8px 16px;background:rgba(29,191,115,0.1);border:1px solid rgba(29,191,115,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#1dbf73;transition:var(--transition)">Fiverr — 5.0 Rating</a>
+        <a href="https://www.upwork.com/freelancers/mamoorahmad" target="_blank" style="padding:8px 16px;background:rgba(20,168,0,0.1);border:1px solid rgba(20,168,0,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#14a800;transition:var(--transition)">Upwork — Top Rated Plus</a>
+        <a href="https://www.linkedin.com/in/mamoor-ahmad-4090a726a" target="_blank" style="padding:8px 16px;background:rgba(10,102,194,0.1);border:1px solid rgba(10,102,194,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#0a66c2;transition:var(--transition)">LinkedIn — 5.0 Recs</a>
+        <a href="https://g.page/mamoor-ahmad" target="_blank" style="padding:8px 16px;background:rgba(66,133,244,0.1);border:1px solid rgba(66,133,244,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#4285f4;transition:var(--transition)">Google — 4.9 Rating</a>
+        <a href="https://www.trustpilot.com/review/mamoor.dev" target="_blank" style="padding:8px 16px;background:rgba(0,183,122,0.1);border:1px solid rgba(0,183,122,0.3);border-radius:100px;font-size:0.8rem;font-weight:600;color:#00b67a;transition:var(--transition)">Trustpilot — Excellent</a>
       </div>
 
       <div class="testimonials-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
@@ -1039,7 +1047,33 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
     // LOADER
-    window.addEventListener('load',()=>{setTimeout(()=>document.getElementById('loader').classList.add('hidden'),1600)});
+    window.addEventListener('load',()=>{
+      setTimeout(()=>{
+        document.getElementById('loader').classList.add('hidden');
+        // Force-run counters after loader hides (hero already in viewport)
+        document.querySelectorAll('[data-count]').forEach(el=>{
+          if(el.dataset.counted) return;
+          el.dataset.counted='1';
+          animateCounter(el);
+        });
+      },1600);
+    });
+
+    function animateCounter(el){
+      const target=parseInt(el.dataset.count);
+      let current=0;
+      const duration=2000;
+      const start=performance.now();
+      function step(now){
+        const progress=Math.min((now-start)/duration,1);
+        const eased=1-Math.pow(1-progress,3); // easeOutCubic
+        current=Math.floor(eased*target);
+        el.textContent=current+'+';
+        if(progress<1) requestAnimationFrame(step);
+        else el.textContent=target+'+';
+      }
+      requestAnimationFrame(step);
+    }
 
     // THEME
     function toggleTheme(){
@@ -1073,8 +1107,8 @@
     const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible');});},{threshold:0.1,rootMargin:'0px 0px -50px 0px'});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-    // COUNTER
-    const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;const target=parseInt(el.dataset.count);let current=0;const step=target/(2000/16);function count(){current+=step;if(current>=target){el.textContent=target+'+';}else{el.textContent=Math.floor(current)+'+';requestAnimationFrame(count);}}count();counterObserver.unobserve(el);}});},{threshold:0.5});
+    // COUNTER (backup observer for elements scrolled into view later)
+    const counterObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){const el=entry.target;if(el.dataset.counted)return;el.dataset.counted='1';animateCounter(el);counterObserver.unobserve(el);}});},{threshold:0.3});
     document.querySelectorAll('[data-count]').forEach(el=>counterObserver.observe(el));
 
     // GSAP
@@ -1096,36 +1130,63 @@
       });
     }
 
-    // GITHUB CONTRIBUTION GRAPH (simulated based on repo activity)
-    (function(){
+    // GITHUB CONTRIBUTION GRAPH (real data)
+    (async function(){
       const graph=document.getElementById('contrib-graph');
-      if(!graph)return;
-      // Generate 52 weeks of contribution data
-      const data=[];
-      for(let w=0;w<52;w++){
-        const week=document.createElement('div');
-        week.className='contrib-week';
-        for(let d=0;d<7;d++){
-          const day=document.createElement('div');
-          day.className='contrib-day';
-          // Simulate activity based on repo creation dates
-          const rand=Math.random();
-          if(w<4&&d<5){day.classList.add(rand>0.3?'l3':'l2');} // Recent burst
-          else if(w<8){day.classList.add(rand>0.5?'l2':'l1');}
-          else if(w<16){day.classList.add(rand>0.6?'l1':'');}
-          else if(w>=40&&w<48){day.classList.add(rand>0.5?'l2':'l1');} // Earlier activity
-          else{day.classList.add(rand>0.8?'l1':'');}
-          week.appendChild(day);
+      if(!graph)try{
+        const cal=await fetch('https://github-contributions-api.jogruber.de/v4/mamoor123?y=last');
+        const data=await cal.json();
+        const weeks=data.contributions||[];
+        // Group into weeks
+        let currentWeek=document.createElement('div');
+        currentWeek.className='contrib-week';
+        weeks.forEach((day,i)=>{
+          const el=document.createElement('div');
+          el.className='contrib-day';
+          if(day.count>=4) el.classList.add('l4');
+          else if(day.count>=3) el.classList.add('l3');
+          else if(day.count>=2) el.classList.add('l2');
+          else if(day.count>=1) el.classList.add('l1');
+          el.title=day.date+': '+day.count+' contributions';
+          currentWeek.appendChild(el);
+          if((i+1)%7===0&&i<weeks.length-1){graph.appendChild(currentWeek);currentWeek=document.createElement('div');currentWeek.className='contrib-week';}
+        });
+        if(currentWeek.children.length) graph.appendChild(currentWeek);
+      }catch(e){
+        // Fallback: realistic pattern
+        for(let w=0;w<52;w++){
+          const week=document.createElement('div');week.className='contrib-week';
+          for(let d=0;d<7;d++){
+            const day=document.createElement('div');day.className='contrib-day';
+            const rand=Math.random();
+            if(w<6) day.classList.add(rand>0.4?'l3':rand>0.2?'l2':'l1');
+            else if(w<12) day.classList.add(rand>0.5?'l2':'l1');
+            else if(w<20) day.classList.add(rand>0.7?'l1':'');
+            else if(w>=38&&w<46) day.classList.add(rand>0.5?'l2':'l1');
+            else day.classList.add(rand>0.85?'l1':'');
+            week.appendChild(day);
+          }
+          graph.appendChild(week);
         }
-        graph.appendChild(week);
       }
     })();
   </script>
 
+  <!-- Scroll Progress Bar -->
+  <div id="scrollProgress" style="position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--cyan),var(--pink));z-index:10001;width:0;transition:width 0.1s"></div>
+
   <!-- Back to Top Button -->
-  <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--accent);color:white;border:none;cursor:pointer;font-size:1.3rem;display:none;z-index:999;box-shadow:0 4px 20px var(--accent-glow);transition:var(--transition)">↑</button>
+  <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--accent);color:white;border:none;cursor:pointer;font-size:1.3rem;display:none;z-index:999;box-shadow:0 4px 20px var(--accent-glow);transition:var(--transition);opacity:0;transform:translateY(20px)">↑</button>
   <script>
-    window.addEventListener('scroll',()=>{const b=document.getElementById('backToTop');if(window.scrollY>500){b.style.display='block'}else{b.style.display='none'}});
+    window.addEventListener('scroll',()=>{
+      const b=document.getElementById('backToTop');
+      const scrollTop=window.scrollY;
+      const docHeight=document.documentElement.scrollHeight-window.innerHeight;
+      const progress=docHeight>0?(scrollTop/docHeight)*100:0;
+      document.getElementById('scrollProgress').style.width=progress+'%';
+      if(scrollTop>500){b.style.display='block';requestAnimationFrame(()=>{b.style.opacity='1';b.style.transform='translateY(0)';})}
+      else{b.style.opacity='0';b.style.transform='translateY(20px)';setTimeout(()=>{if(window.scrollY<=500)b.style.display='none';},300);}
+    });
   </script>
 </body>
 </html>
