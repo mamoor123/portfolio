@@ -122,13 +122,3 @@ document.getElementById('projects-grid').addEventListener('click',e=>{
     }
   }
 })();
-  <script>
-window.addEventListener('scroll',()=>{
-  const b=document.getElementById('backToTop');
-  const scrollTop=window.scrollY;
-  const docHeight=document.documentElement.scrollHeight-window.innerHeight;
-  const progress=docHeight>0?(scrollTop/docHeight)*100:0;
-  document.getElementById('scrollProgress').style.width=progress+'%';
-  if(scrollTop>500){b.style.display='block';requestAnimationFrame(()=>{b.style.opacity='1';b.style.transform='translateY(0)';})}
-  else{b.style.opacity='0';b.style.transform='translateY(20px)';setTimeout(()=>{if(window.scrollY<=500)b.style.display='none';},300);}
-});
