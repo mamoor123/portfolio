@@ -1,17 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <rect width="800" height="500" fill="#0a1428" rx="12"/>
-  <rect x="0" y="0" width="800" height="48" fill="#132848" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#132848"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
-  <rect x="100" y="14" width="350" height="20" rx="10" fill="#0a1428"/>
-  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://aisupportagent.app</text>
+  <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/ai-support-agent</text>
   <rect x="0" y="48" width="200" height="452" fill="#132848" rx="0"/>
-  <rect x="220" y="70" width="540" height="60" fill="#132848" rx="8"/>
-  <rect x="240" y="150" width="300" height="50" fill="#1e3a5f" rx="12"/>
-  <rect x="460" y="220" width="300" height="50" fill="#6366f1" rx="12"/>
-  <rect x="240" y="290" width="300" height="50" fill="#1e3a5f" rx="12"/>
-  <rect x="220" y="400" width="540" height="50" fill="#132848" rx="8"/>
-  <text x="400" y="470" font-size="13" fill="#9ca3af" text-anchor="middle">🎧 AI Support Agent — Python · TypeScript</text>
+  <rect x="15" y="65" width="170" height="36" fill="#6366f1" opacity="0.15" rx="8"/>
+  <text x="30" y="88" font-family="'Inter',sans-serif" font-size="12" fill="#6366f1">New Chat</text>
+  <rect x="15" y="110" width="170" height="28" fill="#ffffff" opacity="0.03" rx="6"/>
+  <rect x="15" y="145" width="170" height="28" fill="#ffffff" opacity="0.03" rx="6"/>
+  <rect x="15" y="180" width="170" height="28" fill="#ffffff" opacity="0.03" rx="6"/>
+  <rect x="220" y="65" width="560" height="60" fill="#132848" rx="12"/>
+  <text x="240" y="100" font-family="'Inter',sans-serif" font-size="14" fill="#e5e7eb">Upload your data file to get started</text>
+  <rect x="220" y="140" width="560" height="48" fill="#132848" rx="12" opacity="0.5"/>
+  <text x="240" y="170" font-family="'Inter',sans-serif" font-size="13" fill="#9ca3af">📎 sales_data.csv uploaded</text>
+  <rect x="260" y="200" width="500" height="80" fill="#6366f1" opacity="0.1" rx="12"/>
+  <text x="280" y="225" font-family="'Inter',sans-serif" font-size="13" fill="#818cf8">What were the top selling products in Q4?</text>
+  <text x="280" y="255" font-family="'Inter',sans-serif" font-size="11" fill="#6b7280">Analyzing sales_data.csv...</text>
+  <rect x="220" y="300" width="560" height="100" fill="#132848" rx="12"/>
+  <text x="240" y="325" font-family="'Inter',sans-serif" font-size="13" fill="#e5e7eb">Based on your data, the top 3 products in Q4 were:</text>
+  <text x="240" y="350" font-family="'Inter',sans-serif" font-size="12" fill="#818cf8">1. Widget Pro — $48,200</text>
+  <text x="240" y="370" font-family="'Inter',sans-serif" font-size="12" fill="#818cf8">2. Gadget X — $35,100</text>
+  <text x="240" y="390" font-family="'Inter',sans-serif" font-size="12" fill="#818cf8">3. ToolKit — $28,400</text>
+  <rect x="220" y="440" width="560" height="44" fill="#132848" rx="12"/>
+  <text x="240" y="467" font-family="'Inter',sans-serif" font-size="12" fill="#6b7280">Ask a question about your data...</text>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">🎧 AI Support Agent — Python · TypeScript · Support</text>
 </svg>

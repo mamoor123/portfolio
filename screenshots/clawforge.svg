@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <rect width="800" height="500" fill="#1a0f0f" rx="12"/>
+  <rect width="800" height="500" fill="#0f172a" rx="12"/>
   <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
   <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
   <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
-  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/firecrawl-openclaw-tool</text>
-  <rect x="40" y="70" width="720" height="400" fill="#301a1a" rx="12"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/clawforge</text>
+  <rect x="40" y="70" width="720" height="400" fill="#1e293b" rx="12"/>
   <rect x="40" y="70" width="720" height="36" fill="#0d1117" rx="12"/>
   <rect x="40" y="94" width="720" height="12" fill="#0d1117"/>
   <circle cx="60" cy="88" r="5" fill="#ef4444"/>
   <circle cx="78" cy="88" r="5" fill="#fbbf24"/>
   <circle cx="96" cy="88" r="5" fill="#22c55e"/>
   <text x="400" y="92" font-family="monospace" font-size="11" fill="#4b5563" text-anchor="middle">Terminal</text>
-  <text x="60" y="130" font-family="'JetBrains Mono','Fira Code',monospace" font-size="13" fill="#ef4444">$ <tspan fill="#e5e7eb">npm run build</tspan></text>
+  <text x="60" y="130" font-family="'JetBrains Mono','Fira Code',monospace" font-size="13" fill="#3b82f6">$ <tspan fill="#e5e7eb">npm run build</tspan></text>
   <text x="60" y="152" font-family="monospace" font-size="12" fill="#22c55e">✓ Build completed in 2.4s</text>
-  <text x="60" y="174" font-family="monospace" font-size="13" fill="#ef4444">$ <tspan fill="#e5e7eb">npm test</tspan></text>
+  <text x="60" y="174" font-family="monospace" font-size="13" fill="#3b82f6">$ <tspan fill="#e5e7eb">npm test</tspan></text>
   <text x="60" y="196" font-family="monospace" font-size="12" fill="#22c55e">✓ 24 tests passed</text>
-  <text x="60" y="218" font-family="monospace" font-size="13" fill="#ef4444">$ <tspan fill="#e5e7eb">git push origin main</tspan></text>
+  <text x="60" y="218" font-family="monospace" font-size="13" fill="#3b82f6">$ <tspan fill="#e5e7eb">git push origin main</tspan></text>
   <text x="60" y="240" font-family="monospace" font-size="12" fill="#6b7280">Enumerating objects: 42, done.</text>
   <text x="60" y="262" font-family="monospace" font-size="12" fill="#6b7280">Counting objects: 100% (42/42), done.</text>
   <text x="60" y="284" font-family="monospace" font-size="12" fill="#22c55e">✓ Deployed successfully</text>
   <rect x="60" y="310" width="680" height="1" fill="#ffffff" opacity="0.05"/>
-  <text x="60" y="340" font-family="monospace" font-size="13" fill="#ef4444">$ <tspan fill="#e5e7eb" opacity="0.5">_</tspan></text>
-  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">🕷️ Firecrawl OpenClaw — JavaScript · Web Scraping · OpenClaw</text>
+  <text x="60" y="340" font-family="monospace" font-size="13" fill="#3b82f6">$ <tspan fill="#e5e7eb" opacity="0.5">_</tspan></text>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">⚒️ ClawForge — TypeScript · CI/CD · Multi-Agent</text>
 </svg>

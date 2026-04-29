@@ -1,15 +1,42 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <rect width="800" height="500" fill="#1a0a20" rx="12"/>
-  <rect x="0" y="0" width="800" height="48" fill="#2a1432" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#2a1432"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
-  <rect x="100" y="14" width="350" height="20" rx="10" fill="#1a0a20"/>
-  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://agentdnaluxury.app</text>
-  <rect x="100" y="100" width="600" height="300" fill="#2a1432" rx="12"/>
-  <text x="400" y="200" font-family="Inter,system-ui,sans-serif" font-size="14" fill="#a78bfa" text-anchor="middle">Welcome to your</text>
-  <text x="400" y="240" font-family="Inter,system-ui,sans-serif" font-size="28" fill="#f0abfc" text-anchor="middle">Luxury Concierge</text>
-  <rect x="280" y="300" width="240" height="40" fill="#ec4899" rx="20"/>
-  <text x="400" y="470" font-size="13" fill="#9ca3af" text-anchor="middle">💎 AgentDNA Luxury — Python · AI</text>
+  <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/agentdna_luxury_prototype</text>
+  <rect x="0" y="48" width="180" height="452" fill="#261030" rx="0"/>
+  <rect x="15" y="65" width="150" height="10" rx="5" fill="#d4a574" opacity="0.3"/>
+  <rect x="15" y="90" width="120" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="15" y="110" width="140" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="15" y="130" width="100" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="15" y="170" width="150" height="8" rx="4" fill="#d4a574" opacity="0.15"/>
+  <rect x="15" y="190" width="130" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="200" y="65" width="280" height="180" fill="#301840" rx="12"/>
+  <rect x="215" y="80" width="50" height="50" rx="25" fill="#d4a574" opacity="0.2"/>
+  <rect x="215" y="140" width="250" height="12" rx="6" fill="#e5e7eb" opacity="0.15"/>
+  <rect x="215" y="160" width="200" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="215" y="180" width="180" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="215" y="210" width="80" height="24" rx="12" fill="#d4a574" opacity="0.2"/>
+  <rect x="500" y="65" width="280" height="180" fill="#301840" rx="12"/>
+  <rect x="515" y="80" width="50" height="50" rx="25" fill="#e8c49a" opacity="0.2"/>
+  <rect x="515" y="140" width="250" height="12" rx="6" fill="#e5e7eb" opacity="0.15"/>
+  <rect x="515" y="160" width="200" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="515" y="180" width="180" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="515" y="210" width="80" height="24" rx="12" fill="#e8c49a" opacity="0.2"/>
+  <rect x="200" y="260" width="280" height="180" fill="#301840" rx="12"/>
+  <rect x="215" y="275" width="50" height="50" rx="25" fill="#d4a574" opacity="0.15"/>
+  <rect x="215" y="335" width="250" height="12" rx="6" fill="#e5e7eb" opacity="0.15"/>
+  <rect x="215" y="355" width="200" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="215" y="375" width="180" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="215" y="405" width="80" height="24" rx="12" fill="#d4a574" opacity="0.2"/>
+  <rect x="500" y="260" width="280" height="180" fill="#301840" rx="12"/>
+  <rect x="515" y="275" width="50" height="50" rx="25" fill="#e8c49a" opacity="0.15"/>
+  <rect x="515" y="335" width="250" height="12" rx="6" fill="#e5e7eb" opacity="0.15"/>
+  <rect x="515" y="355" width="200" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="515" y="375" width="180" height="8" rx="4" fill="#6b7280" opacity="0.1"/>
+  <rect x="515" y="405" width="80" height="24" rx="12" fill="#e8c49a" opacity="0.2"/>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">✨ AgentDNA Luxury — Python · AI Agent · Luxury</text>
 </svg>

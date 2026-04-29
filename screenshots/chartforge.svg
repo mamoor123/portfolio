@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#0f0a1a" rx="12"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
+  <circle cx="24" cy="24" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
+  <circle cx="64" cy="24" r="6" fill="#22c55e"/>
+  <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/chartforge</text>
+  <rect x="0" y="48" width="180" height="452" fill="#170f24" rx="0"/>
+  <rect x="15" y="65" width="150" height="10" rx="5" fill="#f97316" opacity="0.3"/>
+  <rect x="15" y="90" width="120" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="15" y="110" width="140" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="15" y="150" width="150" height="8" rx="4" fill="#f97316" opacity="0.15"/>
+  <rect x="15" y="170" width="130" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="200" y="65" width="580" height="380" fill="#1e1430" rx="12"/>
+  <text x="220" y="90" font-family="'Inter',sans-serif" font-size="14" fill="#e5e7eb">Revenue Overview</text>
+  <rect x="660" y="75" width="100" height="28" rx="8" fill="#f97316" opacity="0.15"/>
+  <text x="710" y="94" font-family="'Inter',sans-serif" font-size="11" fill="#f97316" text-anchor="middle">Export ▼</text>
+  <line x1="220" y1="120" x2="220" y2="420" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <line x1="220" y1="420" x2="760" y2="420" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <text x="210" y="420" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="end">0</text>
+  <text x="210" y="340" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="end">25k</text>
+  <text x="210" y="260" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="end">50k</text>
+  <text x="210" y="180" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="end">75k</text>
+  <rect x="260" y="340" width="50" height="80" fill="#f97316" opacity="0.4" rx="4"/>
+  <rect x="340" y="280" width="50" height="140" fill="#f97316" opacity="0.5" rx="4"/>
+  <rect x="420" y="220" width="50" height="200" fill="#f97316" opacity="0.6" rx="4"/>
+  <rect x="500" y="260" width="50" height="160" fill="#f97316" opacity="0.5" rx="4"/>
+  <rect x="580" y="180" width="50" height="240" fill="#f97316" opacity="0.7" rx="4"/>
+  <rect x="660" y="160" width="50" height="260" fill="#f97316" rx="4"/>
+  <text x="285" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">Jan</text>
+  <text x="365" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">Feb</text>
+  <text x="445" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">Mar</text>
+  <text x="525" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">Apr</text>
+  <text x="605" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">May</text>
+  <text x="685" y="440" font-family="monospace" font-size="9" fill="#4b5563" text-anchor="middle">Jun</text>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">📊 ChartForge — Python · Data Viz · Charts</text>
+</svg>

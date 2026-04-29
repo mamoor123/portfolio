@@ -1,17 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <rect width="800" height="500" fill="#140a28" rx="12"/>
-  <rect x="0" y="0" width="800" height="48" fill="#221440" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#221440"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
-  <rect x="100" y="14" width="350" height="20" rx="10" fill="#140a28"/>
-  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://biolinkai.app</text>
-  <rect x="250" y="70" width="300" height="400" fill="#221440" rx="16"/>
-  <circle cx="400" cy="150" r="40" fill="#8b5cf6" opacity="0.4"/>
-  <rect x="310" y="210" width="180" height="30" fill="#2e1a50" rx="15"/>
-  <rect x="310" y="255" width="180" height="30" fill="#2e1a50" rx="15"/>
-  <rect x="310" y="300" width="180" height="30" fill="#2e1a50" rx="15"/>
-  <rect x="310" y="345" width="180" height="30" fill="#2e1a50" rx="15"/>
-  <text x="400" y="470" font-size="13" fill="#9ca3af" text-anchor="middle">🔗 BioLink AI — TypeScript · SaaS</text>
+  <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/biolink-ai</text>
+  <rect x="0" y="48" width="60" height="452" fill="#221440" rx="0"/>
+  <rect x="15" y="70" width="30" height="30" rx="8" fill="#8b5cf6" opacity="0.2"/>
+  <rect x="15" y="115" width="30" height="30" rx="8" fill="#ffffff" opacity="0.05"/>
+  <rect x="15" y="160" width="30" height="30" rx="8" fill="#ffffff" opacity="0.05"/>
+  <rect x="15" y="205" width="30" height="30" rx="8" fill="#ffffff" opacity="0.05"/>
+  <rect x="15" y="250" width="30" height="30" rx="8" fill="#ffffff" opacity="0.05"/>
+  <rect x="75" y="65" width="350" height="400" fill="#221440" rx="12"/>
+  <text x="95" y="90" font-family="'Inter',sans-serif" font-size="12" fill="#6b7280">Canvas</text>
+  <rect x="95" y="110" width="310" height="60" fill="#221440" rx="8"/>
+  <rect x="110" y="125" width="100" height="10" rx="5" fill="#8b5cf6" opacity="0.3"/>
+  <rect x="110" y="145" width="200" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="95" y="190" width="310" height="80" fill="#221440" rx="8"/>
+  <rect x="110" y="205" width="150" height="10" rx="5" fill="#a78bfa" opacity="0.3"/>
+  <rect x="110" y="225" width="280" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="110" y="245" width="250" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+  <rect x="95" y="290" width="310" height="50" fill="#8b5cf6" opacity="0.1" rx="8"/>
+  <text x="250" y="320" font-family="'Inter',sans-serif" font-size="13" fill="#8b5cf6" text-anchor="middle">Submit →</text>
+  <rect x="440" y="65" width="340" height="400" fill="#221440" rx="12"/>
+  <text x="460" y="90" font-family="'Inter',sans-serif" font-size="12" fill="#6b7280">Properties</text>
+  <rect x="460" y="110" width="300" height="36" fill="#221440" rx="8"/>
+  <text x="475" y="133" font-family="'Inter',sans-serif" font-size="11" fill="#9ca3af">Form Title</text>
+  <rect x="460" y="160" width="300" height="36" fill="#221440" rx="8"/>
+  <text x="475" y="183" font-family="'Inter',sans-serif" font-size="11" fill="#9ca3af">Description</text>
+  <rect x="460" y="210" width="300" height="36" fill="#221440" rx="8"/>
+  <text x="475" y="233" font-family="'Inter',sans-serif" font-size="11" fill="#9ca3af">Theme Color</text>
+  <rect x="460" y="270" width="140" height="36" rx="8" fill="#8b5cf6" opacity="0.2"/>
+  <text x="530" y="293" font-family="'Inter',sans-serif" font-size="11" fill="#8b5cf6" text-anchor="middle">Add Field</text>
+  <rect x="620" y="270" width="140" height="36" rx="8" fill="#a78bfa" opacity="0.2"/>
+  <text x="690" y="293" font-family="'Inter',sans-serif" font-size="11" fill="#a78bfa" text-anchor="middle">Preview</text>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">🔗 BioLink AI — TypeScript · SaaS · AI</text>
 </svg>

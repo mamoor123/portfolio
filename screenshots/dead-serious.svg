@@ -1,17 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
   <rect width="800" height="500" fill="#111111" rx="12"/>
-  <rect x="0" y="0" width="800" height="48" fill="#1a1a1a" rx="12"/>
-  <rect x="0" y="24" width="800" height="24" fill="#1a1a1a"/>
+  <rect x="0" y="0" width="800" height="48" fill="#1a1a2e" rx="12"/>
+  <rect x="0" y="24" width="800" height="24" fill="#1a1a2e"/>
   <circle cx="24" cy="24" r="6" fill="#ef4444"/>
   <circle cx="44" cy="24" r="6" fill="#fbbf24"/>
   <circle cx="64" cy="24" r="6" fill="#22c55e"/>
-  <rect x="100" y="14" width="350" height="20" rx="10" fill="#111111"/>
-  <text x="275" y="28" font-family="monospace" font-size="11" fill="#6b7280" text-anchor="middle">https://deadserious.app</text>
-  <rect x="100" y="120" width="600" height="100" fill="#1a1a1a" rx="8"/>
-  <text x="400" y="165" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#ef4444" text-anchor="middle">FATAL: Success is not an option.</text>
-  <text x="400" y="195" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">Please consult your nearest developer.</text>
-  <rect x="100" y="250" width="600" height="100" fill="#1a1a1a" rx="8"/>
-  <text x="400" y="295" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#fbbf24" text-anchor="middle">CRITICAL: Task failed successfully.</text>
-  <text x="400" y="325" font-family="Inter,system-ui,sans-serif" font-size="12" fill="#6b7280" text-anchor="middle">All your code are belong to us.</text>
-  <text x="400" y="470" font-size="13" fill="#9ca3af" text-anchor="middle">💀 Dead Serious — JavaScript · Humor</text>
+  <rect x="100" y="14" width="400" height="20" rx="10" fill="#111127"/>
+  <text x="300" y="28" font-family="'Inter','Segoe UI',sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">github.com/mamoor123/dead-serious</text>
+  <rect x="40" y="80" width="720" height="380" fill="#1a1a1a" rx="16"/>
+  <rect x="40" y="80" width="720" height="50" fill="#1a0000" rx="16"/>
+  <rect x="40" y="115" width="720" height="15" fill="#1a0000"/>
+  <circle cx="65" cy="105" r="8" fill="#ef4444" opacity="0.6"/>
+  <circle cx="85" cy="105" r="8" fill="#fbbf24" opacity="0.6"/>
+  <circle cx="105" cy="105" r="8" fill="#22c55e" opacity="0.6"/>
+  <text x="400" y="108" font-family="monospace" font-size="11" fill="#ef4444" text-anchor="middle">FATAL ERROR</text>
+  <text x="400" y="200" font-family="monospace" font-size="60" fill="#ef4444" text-anchor="middle" opacity="0.8">💀</text>
+  <text x="400" y="250" font-family="'Inter',sans-serif" font-size="22" fill="#e5e7eb" text-anchor="middle" font-weight="700">Something went catastrophically wrong</text>
+  <text x="400" y="280" font-family="'Inter',sans-serif" font-size="14" fill="#9ca3af" text-anchor="middle">Your code was so bad it crashed the error handler</text>
+  <rect x="250" y="320" width="300" height="44" rx="22" fill="#ef4444" opacity="0.15"/>
+  <text x="400" y="348" font-family="'Inter',sans-serif" font-size="14" fill="#ef4444" text-anchor="middle" font-weight="600">Try turning it off and on again</text>
+  <text x="400" y="400" font-family="monospace" font-size="10" fill="#4b5563" text-anchor="middle">Error code: PEBCAK — Problem Exists Between Chair And Keyboard</text>
+  <text x="400" y="420" font-family="monospace" font-size="10" fill="#4b5563" text-anchor="middle">at life.js:1:1 — you tried your best and that's what matters (it didn't help)</text>
+  <text x="400" y="485" font-size="13" fill="#6b7280" text-anchor="middle" font-family="'Inter','Segoe UI',sans-serif">💀 Dead Serious — JavaScript · Humor</text>
 </svg>
