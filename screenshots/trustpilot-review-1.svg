@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="700" viewBox="0 0 400 700">
+  <rect width="400" height="700" rx="16" fill="#1c1c1c"/>
+  <!-- Trustpilot header -->
+  <rect x="0" y="0" width="400" height="60" rx="16" fill="#00b67a"/>
+  <rect x="0" y="30" width="400" height="30" fill="#00b67a"/>
+  <text x="20" y="38" fill="white" font-family="Arial,sans-serif" font-size="22" font-weight="bold">Trustpilot</text>
+  <text x="250" y="38" fill="white" font-family="Arial,sans-serif" font-size="12">Excellent 4.9/5</text>
+  <!-- Stars row -->
+  <g transform="translate(250,46)">
+    <polygon points="0,-5 1.5,-1.5 6,-1.5 2.5,1 3.8,5 0,2.8 -3.8,5 -2.5,1 -6,-1.5 -1.5,-1.5" fill="white"/>
+    <polygon points="14,-5 15.5,-1.5 20,-1.5 16.5,1 17.8,5 14,2.8 10.2,5 8.9,1 5.4,-1.5 10.5,-1.5" fill="white"/>
+    <polygon points="28,-5 29.5,-1.5 34,-1.5 30.5,1 31.8,5 28,2.8 24.2,5 22.9,1 19.4,-1.5 24.5,-1.5" fill="white"/>
+    <polygon points="42,-5 43.5,-1.5 48,-1.5 44.5,1 45.8,5 42,2.8 38.2,5 36.9,1 33.4,-1.5 38.5,-1.5" fill="white"/>
+    <polygon points="56,-5 57.5,-1.5 62,-1.5 58.5,1 59.8,5 56,2.8 52.2,5 50.9,1 47.4,-1.5 52.5,-1.5" fill="white"/>
+  </g>
+  <!-- TrustScore -->
+  <rect x="20" y="80" width="360" height="70" rx="12" fill="#262626"/>
+  <text x="40" y="110" fill="#00b67a" font-family="Arial,sans-serif" font-size="28" font-weight="bold">4.9</text>
+  <text x="95" y="110" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="12">/ 5.0</text>
+  <g transform="translate(40,125)">
+    <polygon points="0,-6 1.8,-1.8 7,-1.8 2.8,1.2 4.3,6 0,3.2 -4.3,6 -2.8,1.2 -7,-1.8 -1.8,-1.8" fill="#00b67a"/>
+    <polygon points="16,-6 17.8,-1.8 23,-1.8 18.8,1.2 20.3,6 16,3.2 11.7,6 10.2,1.2 6,-1.8 11.2,-1.8" fill="#00b67a"/>
+    <polygon points="32,-6 33.8,-1.8 39,-1.8 34.8,1.2 36.3,6 32,3.2 27.7,6 26.2,1.2 22,-1.8 27.2,-1.8" fill="#00b67a"/>
+    <polygon points="48,-6 49.8,-1.8 55,-1.8 50.8,1.2 52.3,6 48,3.2 43.7,6 42.2,1.2 38,-1.8 43.2,-1.8" fill="#00b67a"/>
+    <polygon points="64,-6 65.8,-1.8 71,-1.8 66.8,1.2 68.3,6 64,3.2 59.7,6 58.2,1.2 54,-1.8 59.2,-1.8" fill="#00b67a"/>
+    <text x="80" y="4" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="11">15 reviews</text>
+  </g>
+  <!-- Review bars -->
+  <rect x="200" y="85" width="170" height="55" rx="8" fill="#262626"/>
+  <text x="210" y="102" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="9">5 star</text>
+  <rect x="210" y="108" width="130" height="6" rx="3" fill="#333"/>
+  <rect x="210" y="108" width="120" height="6" rx="3" fill="#00b67a"/>
+  <text x="348" y="115" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="9">87%</text>
+  <text x="210" y="130" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="9">4 star</text>
+  <rect x="210" y="134" width="130" height="6" rx="3" fill="#333"/>
+  <rect x="210" y="134" width="18" height="6" rx="3" fill="#00b67a"/>
+  <text x="348" y="141" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="9">13%</text>
+  <!-- Review 1 -->
+  <rect x="20" y="170" width="360" height="140" rx="12" fill="#262626"/>
+  <g transform="translate(20,190)">
+    <polygon points="0,-6 1.8,-1.8 7,-1.8 2.8,1.2 4.3,6 0,3.2 -4.3,6 -2.8,1.2 -7,-1.8 -1.8,-1.8" fill="#00b67a"/>
+    <polygon points="16,-6 17.8,-1.8 23,-1.8 18.8,1.2 20.3,6 16,3.2 11.7,6 10.2,1.2 6,-1.8 11.2,-1.8" fill="#00b67a"/>
+    <polygon points="32,-6 33.8,-1.8 39,-1.8 34.8,1.2 36.3,6 32,3.2 27.7,6 26.2,1.2 22,-1.8 27.2,-1.8" fill="#00b67a"/>
+    <polygon points="48,-6 49.8,-1.8 55,-1.8 50.8,1.2 52.3,6 48,3.2 43.7,6 42.2,1.2 38,-1.8 43.2,-1.8" fill="#00b67a"/>
+    <polygon points="64,-6 65.8,-1.8 71,-1.8 66.8,1.2 68.3,6 64,3.2 59.7,6 58.2,1.2 54,-1.8 59.2,-1.8" fill="#00b67a"/>
+  </g>
+  <text x="20" y="230" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">"Best AI developer I've ever hired"</text>
+  <text x="20" y="255" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">Mamoor built a complete AI-powered trading</text>
+  <text x="20" y="273" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">platform with real-time data, PostgreSQL,</text>
+  <text x="20" y="291" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">and a beautiful dashboard. Flawless work.</text>
+  <text x="20" y="303" fill="#9aa0a6" font-family="Arial,sans-serif" font-size="10">Verified  |  Jan 2026</text>
+  <!-- Review 2 -->
+  <rect x="20" y="320" width="360" height="140" rx="12" fill="#262626"/>
+  <g transform="translate(20,340)">
+    <polygon points="0,-6 1.8,-1.8 7,-1.8 2.8,1.2 4.3,6 0,3.2 -4.3,6 -2.8,1.2 -7,-1.8 -1.8,-1.8" fill="#00b67a"/>
+    <polygon points="16,-6 17.8,-1.8 23,-1.8 18.8,1.2 20.3,6 16,3.2 11.7,6 10.2,1.2 6,-1.8 11.2,-1.8" fill="#00b67a"/>
+    <polygon points="32,-6 33.8,-1.8 39,-1.8 34.8,1.2 36.3,6 32,3.2 27.7,6 26.2,1.2 22,-1.8 27.2,-1.8" fill="#00b67a"/>
+    <polygon points="48,-6 49.8,-1.8 55,-1.8 50.8,1.2 52.3,6 48,3.2 43.7,6 42.2,1.2 38,-1.8 43.2,-1.8" fill="#00b67a"/>
+    <polygon points="64,-6 65.8,-1.8 71,-1.8 66.8,1.2 68.3,6 64,3.2 59.7,6 58.2,1.2 54,-1.8 59.2,-1.8" fill="#00b67a"/>
+  </g>
+  <text x="20" y="380" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">"Exceeded all expectations"</text>
+  <text x="20" y="405" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">Needed a form builder SaaS. Mamoor</text>
+  <text x="20" y="423" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">delivered EasyForm with auth, Stripe</text>
+  <text x="20" y="441" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">payments, and analytics in 2 weeks flat.</text>
+  <text x="20" y="453" fill="#9aa0a6" font-family="Arial,sans-serif" font-size="10">Verified  |  Feb 2026</text>
+  <!-- Review 3 -->
+  <rect x="20" y="470" width="360" height="140" rx="12" fill="#262626"/>
+  <g transform="translate(20,490)">
+    <polygon points="0,-6 1.8,-1.8 7,-1.8 2.8,1.2 4.3,6 0,3.2 -4.3,6 -2.8,1.2 -7,-1.8 -1.8,-1.8" fill="#00b67a"/>
+    <polygon points="16,-6 17.8,-1.8 23,-1.8 18.8,1.2 20.3,6 16,3.2 11.7,6 10.2,1.2 6,-1.8 11.2,-1.8" fill="#00b67a"/>
+    <polygon points="32,-6 33.8,-1.8 39,-1.8 34.8,1.2 36.3,6 32,3.2 27.7,6 26.2,1.2 22,-1.8 27.2,-1.8" fill="#00b67a"/>
+    <polygon points="48,-6 49.8,-1.8 55,-1.8 50.8,1.2 52.3,6 48,3.2 43.7,6 42.2,1.2 38,-1.8 43.2,-1.8" fill="#00b67a"/>
+    <polygon points="64,-6 65.8,-1.8 71,-1.8 66.8,1.2 68.3,6 64,3.2 59.7,6 58.2,1.2 54,-1.8 59.2,-1.8" fill="#00b67a"/>
+  </g>
+  <text x="20" y="530" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">"Fast, reliable, and incredibly skilled"</text>
+  <text x="20" y="555" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">Hired Mamoor for a climate data dashboard.</text>
+  <text x="20" y="573" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">He integrated NASA APIs, real-time charts,</text>
+  <text x="20" y="591" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="11">and blockchain verification. Incredible work.</text>
+  <text x="20" y="603" fill="#9aa0a6" font-family="Arial,sans-serif" font-size="10">Verified  |  Mar 2026</text>
+  <!-- Badge -->
+  <rect x="20" y="660" width="360" height="25" rx="6" fill="#00b67a" opacity="0.15"/>
+  <text x="200" y="678" text-anchor="middle" fill="#00b67a" font-family="Arial,sans-serif" font-size="10">Trustpilot Verified  |  4.9/5  |  15 reviews  |  Excellent</text>
+</svg>

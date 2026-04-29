@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="700" viewBox="0 0 400 700">
+  <rect width="400" height="700" rx="16" fill="#1c1c1c"/>
+  <!-- LinkedIn header -->
+  <rect x="0" y="0" width="400" height="60" rx="16" fill="#0a66c2"/>
+  <rect x="0" y="30" width="400" height="30" fill="#0a66c2"/>
+  <text x="20" y="38" fill="white" font-family="Arial,sans-serif" font-size="22" font-weight="bold">LinkedIn</text>
+  <text x="260" y="38" fill="white" font-family="Arial,sans-serif" font-size="11">Recommendations</text>
+  <!-- Profile -->
+  <rect x="20" y="80" width="360" height="80" rx="12" fill="#262626"/>
+  <circle cx="55" cy="120" r="25" fill="#0a66c2"/>
+  <text x="55" y="126" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">DA</text>
+  <text x="90" y="108" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">David A.</text>
+  <text x="90" y="124" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="11">CTO at InnovateTech</text>
+  <text x="90" y="140" fill="#0a66c2" font-family="Arial,sans-serif" font-size="10">1st connection</text>
+  <text x="340" y="108" text-anchor="end" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="10">March 2026</text>
+  <!-- Stars -->
+  <g transform="translate(20,180)">
+    <polygon points="0,-8 2.4,-2.5 9.3,-2.5 3.8,1.5 5.8,8 0,4.3 -5.8,8 -3.8,1.5 -9.3,-2.5 -2.4,-2.5" fill="#ffc107"/>
+    <polygon points="22,-8 24.4,-2.5 31.3,-2.5 25.8,1.5 27.8,8 22,4.3 16.2,8 14.2,1.5 8.7,-2.5 15.6,-2.5" fill="#ffc107"/>
+    <polygon points="44,-8 46.4,-2.5 53.3,-2.5 47.8,1.5 49.8,8 44,4.3 38.2,8 36.2,1.5 30.7,-2.5 37.6,-2.5" fill="#ffc107"/>
+    <polygon points="66,-8 68.4,-2.5 75.3,-2.5 69.8,1.5 71.8,8 66,4.3 60.2,8 58.2,1.5 52.7,-2.5 59.6,-2.5" fill="#ffc107"/>
+    <polygon points="88,-8 90.4,-2.5 97.3,-2.5 91.8,1.5 93.8,8 88,4.3 82.2,8 80.2,1.5 74.7,-2.5 81.6,-2.5" fill="#ffc107"/>
+  </g>
+  <!-- Quote -->
+  <text x="20" y="230" fill="white" font-family="Arial,sans-serif" font-size="15" font-weight="bold">"A rare talent in AI engineering"</text>
+  <text x="20" y="260" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">I had the pleasure of working with Mamoor</text>
+  <text x="20" y="278" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">on a complex multi-agent system for our</text>
+  <text x="20" y="296" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">sales pipeline. His ability to architect and</text>
+  <text x="20" y="314" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">deploy production-grade AI agents is truly</text>
+  <text x="20" y="332" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">exceptional. The system now handles 500+</text>
+  <text x="20" y="350" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">leads per day autonomously.</text>
+  <!-- Second recommendation -->
+  <line x1="20" y1="380" x2="380" y2="380" stroke="#333" stroke-width="1"/>
+  <rect x="20" y="400" width="360" height="80" rx="12" fill="#262626"/>
+  <circle cx="55" cy="440" r="25" fill="#0a66c2"/>
+  <text x="55" y="446" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">LR</text>
+  <text x="90" y="428" fill="white" font-family="Arial,sans-serif" font-size="14" font-weight="bold">Lisa R.</text>
+  <text x="90" y="444" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="11">Product Manager at GrowthLab</text>
+  <text x="90" y="460" fill="#0a66c2" font-family="Arial,sans-serif" font-size="10">2nd connection</text>
+  <text x="340" y="428" text-anchor="end" fill="#b0b0b0" font-family="Arial,sans-serif" font-size="10">Feb 2026</text>
+  <g transform="translate(20,500)">
+    <polygon points="0,-8 2.4,-2.5 9.3,-2.5 3.8,1.5 5.8,8 0,4.3 -5.8,8 -3.8,1.5 -9.3,-2.5 -2.4,-2.5" fill="#ffc107"/>
+    <polygon points="22,-8 24.4,-2.5 31.3,-2.5 25.8,1.5 27.8,8 22,4.3 16.2,8 14.2,1.5 8.7,-2.5 15.6,-2.5" fill="#ffc107"/>
+    <polygon points="44,-8 46.4,-2.5 53.3,-2.5 47.8,1.5 49.8,8 44,4.3 38.2,8 36.2,1.5 30.7,-2.5 37.6,-2.5" fill="#ffc107"/>
+    <polygon points="66,-8 68.4,-2.5 75.3,-2.5 69.8,1.5 71.8,8 66,4.3 60.2,8 58.2,1.5 52.7,-2.5 59.6,-2.5" fill="#ffc107"/>
+    <polygon points="88,-8 90.4,-2.5 97.3,-2.5 91.8,1.5 93.8,8 88,4.3 82.2,8 80.2,1.5 74.7,-2.5 81.6,-2.5" fill="#ffc107"/>
+  </g>
+  <text x="20" y="550" fill="white" font-family="Arial,sans-serif" font-size="15" font-weight="bold">"Delivered our SaaS MVP in 2 weeks"</text>
+  <text x="20" y="580" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">Mamoor took our rough idea and turned it</text>
+  <text x="20" y="598" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">into a fully functional SaaS with auth,</text>
+  <text x="20" y="616" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">payments, and dashboard. Clean code,</text>
+  <text x="20" y="634" fill="#d0d0d0" font-family="Arial,sans-serif" font-size="12">great communication, highly recommend!</text>
+  <!-- Badge -->
+  <rect x="20" y="660" width="360" height="25" rx="6" fill="#0a66c2" opacity="0.15"/>
+  <text x="200" y="678" text-anchor="middle" fill="#0a66c2" font-family="Arial,sans-serif" font-size="10">2 Recommendations  |  5.0 Rating  |  All-time Top Performer</text>
+</svg>
