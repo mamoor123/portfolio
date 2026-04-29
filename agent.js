@@ -92,7 +92,7 @@
       whyHire: 'Mamoor has shipped **28+ projects in 2+ years** — that\'s one project every 4 weeks. He builds fast, communicates clearly, and focuses on solving your problem, not showing off code. His clients stay because he treats their projects like his own.',
       difference: 'What sets Mamoor apart: **speed** (ships in weeks, not months), **communication** (daily updates, no black boxes), **versatility** (AI agents to Shopify apps), and **ownership** (he doesn\'t just code — he understands your business problem first).',
       whatToExpect: 'Here\'s what working with Mamoor looks like:\n\n1. **Discovery call** (30 min) — you explain the problem\n2. **Proposal** (within 24h) — scope, timeline, price\n3. **Kickoff** — architecture review, first milestone plan\n4. **Build** — daily updates, regular demos\n5. **Delivery** — tested, documented, deployed\n6. **Support** — 7 days free revisions, then ongoing support available'
-    }
+    },
 
     techStack: ['JavaScript', 'TypeScript', 'Python', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS', 'AI/LLMs', 'Docker', 'Vercel', 'REST APIs', 'Chrome Extensions', 'Stripe', 'Git/CI-CD', 'Data Visualization'],
 
