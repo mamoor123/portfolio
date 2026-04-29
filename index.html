@@ -167,8 +167,8 @@
     .project-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:var(--transition);cursor:pointer;display:flex;flex-direction:column}
     .project-card:hover{border-color:var(--border-hover);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,0.4)}
     .project-card.featured{grid-column:span 2}
-    .project-screenshot{width:100%;height:200px;object-fit:cover;border-bottom:1px solid var(--border)}
-    .project-card.featured .project-screenshot{height:280px}
+    .project-screenshot{width:100%;height:200px;object-fit:contain;background:#0a0a0a;border-bottom:1px solid var(--border)}
+    .project-card.featured .project-screenshot{height:280px;object-fit:contain;background:#0a0a0a}
     .project-body{padding:24px;flex:1;display:flex;flex-direction:column}
     .project-status{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:100px;font-size:0.7rem;font-weight:600;margin-bottom:10px;width:fit-content}
     .status-live{background:var(--green-glow);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
@@ -905,37 +905,37 @@
       <div class="testimonials-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
         <!-- WhatsApp Chat 1 -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/whatsapp-chat-1.svg" alt="WhatsApp Client Chat - AI Agent Inquiry" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/whatsapp-chat-1.svg" alt="WhatsApp Client Chat - AI Agent Inquiry" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- WhatsApp Chat 2 -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/whatsapp-chat-2.svg" alt="WhatsApp Client Chat - Project Delivery" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/whatsapp-chat-2.svg" alt="WhatsApp Client Chat - Project Delivery" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- Fiverr Review -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/fiverr-review-1.svg" alt="Fiverr 5-Star Review" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/fiverr-review-1.svg" alt="Fiverr 5-Star Review" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- Upwork Review -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/upwork-review-1.svg" alt="Upwork Top Rated Review" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/upwork-review-1.svg" alt="Upwork Top Rated Review" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- LinkedIn Recommendations -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/linkedin-recommendation-1.svg" alt="LinkedIn Recommendations" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/linkedin-recommendation-1.svg" alt="LinkedIn Recommendations" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- Google Reviews -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden">
-          <img src="screenshots/google-review-1.svg" alt="Google Reviews 4.9 Rating" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/google-review-1.svg" alt="Google Reviews 4.9 Rating" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
 
         <!-- Trustpilot Reviews -->
         <div class="testimonial-card reveal" style="padding:0;overflow:hidden;grid-column:span 2">
-          <img src="screenshots/trustpilot-review-1.svg" alt="Trustpilot Excellent Rating" style="width:100%;display:block;border-radius:var(--radius)">
+          <img src="screenshots/trustpilot-review-1.svg" alt="Trustpilot Excellent Rating" style="width:100%;display:block;border-radius:var(--radius);aspect-ratio:400/700;object-fit:contain">
         </div>
       </div>
 
