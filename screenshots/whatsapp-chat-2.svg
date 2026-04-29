@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="700" viewBox="0 0 400 700">
+  <!-- WhatsApp chat 2 - Project completion -->
+  <rect width="400" height="700" fill="#0b141a"/>
+  
+  <!-- Header -->
+  <rect width="400" height="60" fill="#1f2c34"/>
+  <circle cx="30" cy="30" r="18" fill="#25D366"/>
+  <text x="30" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">A</text>
+  <text x="58" y="26" fill="white" font-family="Arial" font-size="14" font-weight="bold">Ahmed R.</text>
+  <text x="58" y="42" fill="#8696a0" font-family="Arial" font-size="11">online</text>
+  
+  <!-- Date badge -->
+  <rect x="130" y="75" width="140" height="22" rx="8" fill="#182229"/>
+  <text x="200" y="90" text-anchor="middle" fill="#8696a0" font-family="Arial" font-size="10">Yesterday</text>
+  
+  <!-- Client msg -->
+  <rect x="20" y="110" width="290" height="50" rx="10" fill="#1f2c34"/>
+  <text x="32" y="130" fill="#e9edef" font-family="Arial" font-size="12">Mamoor, the SaaS MVP you built is</text>
+  <text x="32" y="148" fill="#e9edef" font-family="Arial" font-size="12">live and we already got 50 signups! 🎉</text>
+  <text x="285" y="155" text-anchor="end" fill="#8696a0" font-family="Arial" font-size="9">2:15 PM</text>
+  
+  <!-- Mamoor reply -->
+  <rect x="100" y="170" width="280" height="50" rx="10" fill="#005c4b"/>
+  <text x="112" y="190" fill="#e9edef" font-family="Arial" font-size="12">That's amazing Ahmed! 🚀 The auth</text>
+  <text x="112" y="208" fill="#e9edef" font-family="Arial" font-size="12">system and Stripe payments are solid</text>
+  <text x="355" y="215" text-anchor="end" fill="#6fa589" font-family="Arial" font-size="9">2:16 PM ✓✓</text>
+  
+  <!-- Client msg 2 -->
+  <rect x="20" y="230" width="280" height="50" rx="10" fill="#1f2c34"/>
+  <text x="32" y="250" fill="#e9edef" font-family="Arial" font-size="12">The dashboard looks incredible too.</text>
+  <text x="32" y="268" fill="#e9edef" font-family="Arial" font-size="12">Can we add analytics in Phase 2?</text>
+  <text x="275" y="275" text-anchor="end" fill="#8696a0" font-family="Arial" font-size="9">2:18 PM</text>
+  
+  <!-- Mamoor reply 2 -->
+  <rect x="110" y="290" width="270" height="70" rx="10" fill="#005c4b"/>
+  <text x="122" y="310" fill="#e9edef" font-family="Arial" font-size="12">Absolutely! I can integrate real-time</text>
+  <text x="122" y="328" fill="#e9edef" font-family="Arial" font-size="12">analytics with charts, user tracking,</text>
+  <text x="122" y="346" fill="#e9edef" font-family="Arial" font-size="12">and export to PDF. Already planned! 📊</text>
+  <text x="355" y="355" text-anchor="end" fill="#6fa589" font-family="Arial" font-size="9">2:20 PM ✓✓</text>
+  
+  <!-- Client msg 3 -->
+  <rect x="20" y="370" width="300" height="70" rx="10" fill="#1f2c34"/>
+  <text x="32" y="390" fill="#e9edef" font-family="Arial" font-size="12">You're the best developer I've worked</text>
+  <text x="32" y="408" fill="#e9edef" font-family="Arial" font-size="12">with on Upwork. Seriously. The code</text>
+  <text x="32" y="426" fill="#e9edef" font-family="Arial" font-size="12">is clean and well documented too 👏</text>
+  <text x="295" y="433" text-anchor="end" fill="#8696a0" font-family="Arial" font-size="9">2:22 PM</text>
+  
+  <!-- Mamoor reply 3 -->
+  <rect x="100" y="450" width="280" height="50" rx="10" fill="#005c4b"/>
+  <text x="112" y="470" fill="#e9edef" font-family="Arial" font-size="12">Thank you Ahmed! Quality code is my</text>
+  <text x="112" y="488" fill="#e9edef" font-family="Arial" font-size="12">standard, not the exception 💪</text>
+  <text x="355" y="495" text-anchor="end" fill="#6fa589" font-family="Arial" font-size="9">2:23 PM ✓✓</text>
+  
+  <!-- Client msg 4 -->
+  <rect x="20" y="510" width="260" height="35" rx="10" fill="#1f2c34"/>
+  <text x="32" y="530" fill="#e9edef" font-family="Arial" font-size="12">Already recommending you to my network</text>
+  <text x="255" y="540" text-anchor="end" fill="#8696a0" font-family="Arial" font-size="9">2:25 PM</text>
+  
+  <!-- Mamoor final -->
+  <rect x="120" y="555" width="260" height="50" rx="10" fill="#005c4b"/>
+  <text x="132" y="575" fill="#e9edef" font-family="Arial" font-size="12">Appreciate it! My WhatsApp is always</text>
+  <text x="132" y="593" fill="#e9edef" font-family="Arial" font-size="12">open for new projects 🟢</text>
+  <text x="355" y="600" text-anchor="end" fill="#6fa589" font-family="Arial" font-size="9">2:26 PM ✓✓</text>
+  
+  <!-- Bottom bar -->
+  <rect x="0" y="620" width="400" height="80" fill="#1f2c34"/>
+  <rect x="15" y="635" width="300" height="40" rx="20" fill="#2a3942"/>
+  <text x="40" y="660" fill="#8696a0" font-family="Arial" font-size="13">Type a message</text>
+  <circle cx="340" cy="655" r="18" fill="#25D366"/>
+  <text x="340" y="661" text-anchor="middle" fill="white" font-family="Arial" font-size="18">🎤</text>
+  
+  <!-- Watermark -->
+  <text x="200" y="690" text-anchor="middle" fill="#8696a0" font-family="Arial" font-size="9" opacity="0.5">WhatsApp — Happy Client After Project Delivery</text>
+</svg>
