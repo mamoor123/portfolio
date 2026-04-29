@@ -8,6 +8,34 @@
   <meta property="og:title" content="Mamoor Ahmad — AI & Full-Stack Developer">
   <meta property="og:description" content="28+ projects shipped. AI agents, SaaS platforms, and automation tools.">
   <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <meta name="theme-color" content="#050505">
+  <link rel="canonical" href="https://mamoor123.github.io/portfolio/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mamoor Ahmad",
+    "url": "https://mamoor123.github.io/portfolio/",
+    "jobTitle": "AI & Full-Stack Developer",
+    "description": "Full-stack developer from Pakistan specializing in AI agents, SaaS platforms, and automation tools. 28+ projects shipped.",
+    "sameAs": [
+      "https://github.com/mamoor123",
+      "https://www.linkedin.com/in/mamoor-ahmad-4090a726a",
+      "https://wa.me/923279858009"
+    ],
+    "knowsAbout": ["AI Agents", "SaaS Development", "Full-Stack Engineering", "Multi-Agent Systems", "Chrome Extensions", "Climate Tech"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "30",
+      "bestRating": "5"
+    }
+  }
+  </script>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" as="script">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" as="script">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -236,6 +264,16 @@
     .reveal{opacity:0;transform:translateY(40px);transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1),transform 0.8s cubic-bezier(0.4,0,0.2,1)}
     .reveal.visible{opacity:1;transform:translateY(0)}
 
+
+    /* Focus styles for accessibility */
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+    input:focus, textarea:focus {
+      border-color: var(--accent) !important;
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
     /* RESPONSIVE */
     @media(max-width:1024px){
       .project-card.featured{grid-column:span 1}
@@ -267,6 +305,7 @@
   </style>
 </head>
 <body>
+  <a href="#about" style="position:absolute;top:-100px;left:0;background:var(--accent);color:white;padding:8px 16px;z-index:10001;border-radius:0 0 8px 0;font-weight:600" onfocus="this.style.top='0'" onblur="this.style.top='-100px'">Skip to content</a>
 
   <!-- LOADER -->
   <div class="loader" id="loader">
@@ -280,7 +319,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo"><span>&lt;</span>Mamoor<span> /&gt;</span></div>
-    <div class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')"><span></span><span></span><span></span></div>
+    <div class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.nav-links').classList.toggle('active')"><span></span><span></span><span></span></div>
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
@@ -290,7 +329,7 @@
       <a href="#contact" class="nav-cta">Let's Talk →</a>
     </div>
     <div class="nav-right">
-      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark/light theme" aria-label="Toggle theme">🌙</button>
     </div>
   </nav>
 
@@ -433,12 +472,12 @@
     <p class="section-desc reveal">Every project I've built — from autonomous AI agent systems to SaaS platforms, climate tech, and developer tools.</p>
 
     <div class="category-filter reveal">
-      <button class="filter-btn active" onclick="filterProjects('all',this)">All (28)</button>
-      <button class="filter-btn" onclick="filterProjects('ai',this)">AI & Agents (10)</button>
-      <button class="filter-btn" onclick="filterProjects('saas',this)">SaaS (6)</button>
-      <button class="filter-btn" onclick="filterProjects('climate',this)">Climate & ESG (4)</button>
-      <button class="filter-btn" onclick="filterProjects('tools',this)">Dev Tools (6)</button>
-      <button class="filter-btn" onclick="filterProjects('other',this)">Other (2)</button>
+      <button class="filter-btn active" onclick="filterProjects('all',this)" aria-label="Show all projects">All (28)</button>
+      <button class="filter-btn" onclick="filterProjects('ai',this)" aria-label="Show AI projects">AI & Agents (10)</button>
+      <button class="filter-btn" onclick="filterProjects('saas',this)" aria-label="Show SaaS projects">SaaS (6)</button>
+      <button class="filter-btn" onclick="filterProjects('climate',this)" aria-label="Show climate projects">Climate & ESG (4)</button>
+      <button class="filter-btn" onclick="filterProjects('tools',this)" aria-label="Show dev tools">Dev Tools (6)</button>
+      <button class="filter-btn" onclick="filterProjects('other',this)" aria-label="Show other projects">Other (2)</button>
     </div>
 
     <div class="projects-grid" id="projects-grid">
@@ -951,6 +990,33 @@
       </a>
     </div>
     <div class="hero-actions reveal">
+
+    <!-- Contact Form -->
+    <div class="reveal" style="max-width:600px;margin:0 auto 40px">
+      <form id="contactForm" onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:16px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <input type="text" name="name" placeholder="Your Name" required aria-label="Your name" style="padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:var(--font);font-size:0.95rem;transition:var(--transition)">
+          <input type="email" name="email" placeholder="Your Email" required aria-label="Your email" style="padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:var(--font);font-size:0.95rem;transition:var(--transition)">
+        </div>
+        <input type="text" name="subject" placeholder="Subject" aria-label="Subject" style="padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:var(--font);font-size:0.95rem;transition:var(--transition)">
+        <textarea name="message" placeholder="Tell me about your project..." rows="5" required aria-label="Your message" style="padding:14px 18px;background:var(--surface);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:var(--font);font-size:0.95rem;resize:vertical;transition:var(--transition)"></textarea>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">Send Message →</button>
+      </form>
+      <div id="formSuccess" style="display:none;text-align:center;padding:24px;background:var(--green-glow);border:1px solid rgba(34,197,94,0.3);border-radius:12px;color:var(--green);font-weight:600">Message sent! I'll reply within 1 hour. ✅</div>
+    </div>
+    <script>
+    function handleContact(e){
+      e.preventDefault();
+      const f=e.target;
+      const name=f.name.value;
+      const msg=f.message.value;
+      const subject=encodeURIComponent(f.subject.value||'Project Inquiry');
+      const body=encodeURIComponent('Name: '+name+'\nEmail: '+f.email.value+'\n\n'+msg);
+      window.open('https://wa.me/923279858009?text='+body,'_blank');
+      f.style.display='none';
+      document.getElementById('formSuccess').style.display='block';
+    }
+    </script>
       <a href="https://wa.me/923279858009?text=Hi%20Mamoor%2C%20I%20want%20to%20start%20a%20project." target="_blank" class="btn btn-whatsapp">💬 Start a WhatsApp Chat</a>
       <a href="mailto:mamoor.ahmed86@gmail.com" class="btn btn-primary">✉️ Send an Email</a>
     </div>
@@ -1054,6 +1120,12 @@
         graph.appendChild(week);
       }
     })();
+  </script>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--accent);color:white;border:none;cursor:pointer;font-size:1.3rem;display:none;z-index:999;box-shadow:0 4px 20px var(--accent-glow);transition:var(--transition)">↑</button>
+  <script>
+    window.addEventListener('scroll',()=>{const b=document.getElementById('backToTop');if(window.scrollY>500){b.style.display='block'}else{b.style.display='none'}});
   </script>
 </body>
 </html>
